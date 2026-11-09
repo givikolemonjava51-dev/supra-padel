@@ -364,7 +364,7 @@ footer.foot .logo{font-size:1rem}
           <li data-ka="ძველი თბილისის კერძო ტური">Private Old Tbilisi tour</li>
           <li data-ka="2 ქართული სუფრა">2 supra dinners</li>
         </ul>
-        <a class="btn" href="#book" data-pkg="weekend" data-ka="მოთხოვნა">Request dates</a>
+        <a class="btn" href="#stay" data-pkg="weekend" data-ka="დაჯავშნა">Book now</a>
       </article>
       <article class="pkg feature">
         <p class="tag" data-ka="ყველაზე მოთხოვნადი">Most requested</p>
@@ -380,7 +380,7 @@ footer.foot .logo{font-size:1rem}
           <li data-ka="3 სუფრა + ქემფის ტურნირი">3 supra dinners + camp tournament</li>
           <li data-ka="1 გოგირდის აბანოს სეანსი">1 sulfur bath session</li>
         </ul>
-        <a class="btn solid" href="#book" data-pkg="week" data-ka="მოთხოვნა">Request dates</a>
+        <a class="btn solid" href="#stay" data-pkg="week" data-ka="დაჯავშნა">Book now</a>
       </article>
       <article class="pkg">
         <p class="dur" data-ka="10 დღე · 9 ღამე · 8 სავარჯიშო დღე">10 days · 9 nights · 8 training days</p>
@@ -394,7 +394,7 @@ footer.foot .logo{font-size:1rem}
           <li data-ka="ყაზბეგის ტური">Kazbegi mountain day</li>
           <li data-ka="2 სპორტული მასაჟი">2 sports massages</li>
         </ul>
-        <a class="btn" href="#book" data-pkg="block" data-ka="მოთხოვნა">Request dates</a>
+        <a class="btn" href="#stay" data-pkg="block" data-ka="დაჯავშნა">Book now</a>
       </article>
     </div>
   </div>
@@ -491,7 +491,7 @@ footer.foot .logo{font-size:1rem}
         <div class="body"><p class="occ" data-ka="Family ნომერი · 3 ადამიანი">Family room · 3 guests</p><h3 data-ka="Family ნომერი">Family Room</h3><p data-ka="დიდი და ერთადგილიანი საწოლი. საუკეთესო ფასი სამი მეგობრისთვის.">A king and a single bed. Best value for three friends.</p>
         <div class="opts"><label class="opt" for="st-fam3"><input type="radio" name="stay" id="st-fam3" value="fam3"><span><span data-ka="სამზე">Shared by three</span><small data-ka="ერთ ადამიანზე">per person</small></span><b data-stay-price="fam3">€0</b></label></div></div></div>
     </div>
-    <div class="stay-note" style="display:flex;flex-wrap:wrap;gap:.75rem 1rem;align-items:center"><label for="b-pkg" style="display:flex;gap:.6rem;align-items:center"><span data-ka="ფასები პაკეტისთვის:">Prices for:</span><select id="b-pkg" class="field" style="width:auto"><option value="weekend">Five-Day Camp</option><option value="week" selected>Seven-Day Camp</option><option value="block">Ten-Day Performance Camp</option></select></label><span data-ka="ფასი ერთ ადამიანზეა მთელ ქემფზე.">Per person for the whole camp.</span></div>
+    <div class="stay-note" style="display:flex;flex-wrap:wrap;gap:.75rem 1rem;align-items:center"><label for="b-pkg" style="display:flex;gap:.6rem;align-items:center"><span data-ka="ფასები პაკეტისთვის:">Prices for:</span><select id="b-pkg" class="field" style="width:auto"><option value="weekend">Five-Day Camp</option><option value="week" selected>Seven-Day Camp</option><option value="block">Ten-Day Performance Camp</option></select></label><span data-ka="ფასი ერთ ადამიანზეა მთელ ქემფზე.">Per person for the whole camp.</span><a class="btn solid" href="#book" id="to-book" style="margin-left:auto" data-ka="გაგრძელება: დაჯავშნა">Continue to booking</a></div>
   </div>
 </section>
 
@@ -567,6 +567,7 @@ footer.foot .logo{font-size:1rem}
         <label for="f-dates"><span data-ka="თარიღები">Preferred dates</span><input id="f-dates" class="field" placeholder="12–19 April"></label>
         <label for="f-pkg"><span data-ka="პაკეტი">Camp</span>
           <select id="f-pkg" class="field"><option value="weekend">Five-Day Camp</option><option value="week" selected>Seven-Day Camp</option><option value="block">Ten-Day Performance Camp</option><option value="custom">Private / company group</option></select></label>
+        <label for="f-room"><span data-ka="ნომერი">Room</span><select id="f-room" class="field"><option value="own">Own accommodation</option><option value="std2" selected>Standard, shared (twin beds)</option><option value="std1">Standard, solo</option><option value="dlx2">Deluxe, shared (king bed)</option><option value="dlx1">Deluxe, solo</option><option value="fam3">Family room, shared by three</option></select></label>
         <label for="f-size"><span data-ka="ადამიანების რაოდენობა (მაქს. 10)">Players (max 10)</span><input id="f-size" class="field" type="number" min="1" max="10" value="2"></label>
         <label for="f-msg" class="full"><span data-ka="შეტყობინება">Message</span><textarea id="f-msg" class="field" placeholder="Your level, wishes, dietary needs…"></textarea></label>
         <div class="full"><button class="btn solid" type="submit" data-ka="მოთხოვნის გაგზავნა">Send request</button></div>
@@ -615,6 +616,12 @@ footer.foot .logo{font-size:1rem}
   document.querySelectorAll("[data-plan]").forEach(b=>b.addEventListener("click",()=>{showPlan(b.dataset.plan);pkgSel.value=b.dataset.plan;calc()}));
   pkgSel.addEventListener("change",()=>showPlan(pkgSel.value));
   document.querySelectorAll("[data-pkg]").forEach(b=>b.addEventListener("click",()=>showPlan(b.dataset.pkg)));
+  const fPkg=document.getElementById("f-pkg"),fRoom=document.getElementById("f-room");
+  document.querySelectorAll('input[name="stay"]').forEach(r=>r.addEventListener("change",()=>{fRoom.value=r.value}));
+  fRoom.addEventListener("change",()=>{st=fRoom.value;calc()});
+  pkgSel.addEventListener("change",()=>{fPkg.value=pkgSel.value});
+  fPkg.addEventListener("change",()=>{if(PKGS[fPkg.value]){pkgSel.value=fPkg.value;showPlan(fPkg.value);calc()}});
+  document.getElementById("to-book").addEventListener("click",()=>{fPkg.value=pkgSel.value;fRoom.value=st});
   const form=document.getElementById("req"),ok=document.getElementById("ok");
   form.addEventListener("submit",e=>{
     e.preventDefault();
