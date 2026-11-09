@@ -156,7 +156,7 @@ select.field option{background:var(--ground-2);color:var(--ivory)}
 .summary .fine{font-size:.8rem;color:var(--mist)}
 
 /* upcoming dates */
-.dates{border-top:1px solid var(--rule)}
+.dates{border-top:1px solid var(--rule)}.date-row[hidden]{display:none}.date-filter{margin:0 0 18px;font-size:.9rem;color:var(--mist)}.date-filter[hidden]{display:none}.date-filter button{background:none;border:0;color:var(--gold);text-decoration:underline;cursor:pointer;font:inherit;padding:0;margin-left:8px}
 .date-row{display:grid;grid-template-columns:1.1fr 1.2fr 1.3fr auto;gap:24px;align-items:center;padding-block:22px;border-bottom:1px solid var(--rule)}
 .date-row>*{min-width:0}
 .date-row .when{font:400 1.3rem var(--display)}
@@ -306,12 +306,13 @@ footer.foot .logo{font-size:1rem}
       <h2 data-ka="აირჩიე თარიღი">Choose your dates</h2>
       <p class="lead" data-ka="თითო ჯგუფში 10 ადგილია. როცა ადგილები ივსება, თარიღი იხურება.">Each camp takes 10 players. When the places are gone, the dates close.</p>
     </div>
+    <p class="date-filter" id="date-filter" hidden><span data-ka="ნაჩვენებია შენი პაკეტის თარიღები.">Showing dates for your camp.</span><button type="button" id="date-all" data-ka="ყველა თარიღი">Show all dates</button></p>
     <div class="dates">
-      <div class="date-row"><p class="when">12 – 16 April 2027</p><p class="what" data-ka="5-დღიანი ქემფი">The Five-Day Camp</p><div class="seatbar"><div class="pips" aria-hidden="true"><i class="taken"></i><i class="taken"></i><i class="taken"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small class="" data-ka="7 ადგილი დარჩა 10-დან">7 of 10 places left</small></div><a class="btn" href="#stay" data-pkg="weekend" data-date="12 – 16 April 2027" data-ka="დაჯავშნა">Reserve</a></div>
-      <div class="date-row"><p class="when">3 – 9 May 2027</p><p class="what" data-ka="7-დღიანი ქემფი">The Seven-Day Camp</p><div class="seatbar"><div class="pips" aria-hidden="true"><i class="taken"></i><i class="taken"></i><i class="taken"></i><i class="taken"></i><i class="taken"></i><i class="taken"></i><i></i><i></i><i></i><i></i></div><small class="" data-ka="4 ადგილი დარჩა 10-დან">4 of 10 places left</small></div><a class="btn" href="#stay" data-pkg="week" data-date="3 – 9 May 2027" data-ka="დაჯავშნა">Reserve</a></div>
-      <div class="date-row"><p class="when">7 – 13 June 2027</p><p class="what" data-ka="7-დღიანი ქემფი">The Seven-Day Camp</p><div class="seatbar"><div class="pips" aria-hidden="true"><i class="taken"></i><i class="taken"></i><i class="taken"></i><i class="taken"></i><i class="taken"></i><i class="taken"></i><i class="taken"></i><i class="taken"></i><i class="taken"></i><i></i></div><small class="low" data-ka="1 ადგილი დარჩა 10-დან">1 of 10 places left</small></div><a class="btn" href="#stay" data-pkg="week" data-date="7 – 13 June 2027" data-ka="დაჯავშნა">Reserve</a></div>
-      <div class="date-row"><p class="when">13 – 22 September 2027</p><p class="what" data-ka="10-დღიანი პერფორმანს ქემფი">The Ten-Day Performance Camp</p><div class="seatbar"><div class="pips" aria-hidden="true"><i class="taken"></i><i class="taken"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small class="" data-ka="8 ადგილი დარჩა 10-დან">8 of 10 places left</small></div><a class="btn" href="#stay" data-pkg="block" data-date="13 – 22 September 2027" data-ka="დაჯავშნა">Reserve</a></div>
-      <div class="date-row"><p class="when">4 – 10 October 2027</p><p class="what" data-ka="7-დღიანი ქემფი">The Seven-Day Camp</p><div class="seatbar"><div class="pips" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small class="" data-ka="10 ადგილი დარჩა 10-დან">10 of 10 places left</small></div><a class="btn" href="#stay" data-pkg="week" data-date="4 – 10 October 2027" data-ka="დაჯავშნა">Reserve</a></div>
+      <div class="date-row"><p class="when">12 – 16 April 2027</p><p class="what" data-ka="5-დღიანი ქემფი">The Five-Day Camp</p><div class="seatbar"><div class="pips" aria-hidden="true"><i class="taken"></i><i class="taken"></i><i class="taken"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small class="" data-ka="7 ადგილი დარჩა 10-დან">7 of 10 places left</small></div><a class="btn" href="#book" data-pkg="weekend" data-date="12 – 16 April 2027" data-ka="დაჯავშნა">Reserve</a></div>
+      <div class="date-row"><p class="when">3 – 9 May 2027</p><p class="what" data-ka="7-დღიანი ქემფი">The Seven-Day Camp</p><div class="seatbar"><div class="pips" aria-hidden="true"><i class="taken"></i><i class="taken"></i><i class="taken"></i><i class="taken"></i><i class="taken"></i><i class="taken"></i><i></i><i></i><i></i><i></i></div><small class="" data-ka="4 ადგილი დარჩა 10-დან">4 of 10 places left</small></div><a class="btn" href="#book" data-pkg="week" data-date="3 – 9 May 2027" data-ka="დაჯავშნა">Reserve</a></div>
+      <div class="date-row"><p class="when">7 – 13 June 2027</p><p class="what" data-ka="7-დღიანი ქემფი">The Seven-Day Camp</p><div class="seatbar"><div class="pips" aria-hidden="true"><i class="taken"></i><i class="taken"></i><i class="taken"></i><i class="taken"></i><i class="taken"></i><i class="taken"></i><i class="taken"></i><i class="taken"></i><i class="taken"></i><i></i></div><small class="low" data-ka="1 ადგილი დარჩა 10-დან">1 of 10 places left</small></div><a class="btn" href="#book" data-pkg="week" data-date="7 – 13 June 2027" data-ka="დაჯავშნა">Reserve</a></div>
+      <div class="date-row"><p class="when">13 – 22 September 2027</p><p class="what" data-ka="10-დღიანი პერფორმანს ქემფი">The Ten-Day Performance Camp</p><div class="seatbar"><div class="pips" aria-hidden="true"><i class="taken"></i><i class="taken"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small class="" data-ka="8 ადგილი დარჩა 10-დან">8 of 10 places left</small></div><a class="btn" href="#book" data-pkg="block" data-date="13 – 22 September 2027" data-ka="დაჯავშნა">Reserve</a></div>
+      <div class="date-row"><p class="when">4 – 10 October 2027</p><p class="what" data-ka="7-დღიანი ქემფი">The Seven-Day Camp</p><div class="seatbar"><div class="pips" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small class="" data-ka="10 ადგილი დარჩა 10-დან">10 of 10 places left</small></div><a class="btn" href="#book" data-pkg="week" data-date="4 – 10 October 2027" data-ka="დაჯავშნა">Reserve</a></div>
     </div>
     <p class="sample-note" data-ka="თარიღები და ადგილები ნიმუშია.">Dates and availability shown are samples.</p>
   </div>
@@ -491,7 +492,7 @@ footer.foot .logo{font-size:1rem}
         <div class="body"><p class="occ" data-ka="Family ნომერი · 3 ადამიანი">Family room · 3 guests</p><h3 data-ka="Family ნომერი">Family Room</h3><p data-ka="დიდი და ერთადგილიანი საწოლი. საუკეთესო ფასი სამი მეგობრისთვის.">A king and a single bed. Best value for three friends.</p>
         <div class="opts"><label class="opt" for="st-fam3"><input type="radio" name="stay" id="st-fam3" value="fam3"><span><span data-ka="სამზე">Shared by three</span><small data-ka="ერთ ადამიანზე">per person</small></span><b data-stay-price="fam3">€0</b></label></div></div></div>
     </div>
-    <div class="stay-note" style="display:flex;flex-wrap:wrap;gap:.75rem 1rem;align-items:center"><label for="b-pkg" style="display:flex;gap:.6rem;align-items:center"><span data-ka="ფასები პაკეტისთვის:">Prices for:</span><select id="b-pkg" class="field" style="width:auto"><option value="weekend">Five-Day Camp</option><option value="week" selected>Seven-Day Camp</option><option value="block">Ten-Day Performance Camp</option></select></label><span data-ka="ფასი ერთ ადამიანზეა მთელ ქემფზე.">Per person for the whole camp.</span><a class="btn solid" href="#book" id="to-book" style="margin-left:auto" data-ka="გაგრძელება: დაჯავშნა">Continue to booking</a></div>
+    <div class="stay-note" style="display:flex;flex-wrap:wrap;gap:.75rem 1rem;align-items:center"><label for="b-pkg" style="display:flex;gap:.6rem;align-items:center"><span data-ka="ფასები პაკეტისთვის:">Prices for:</span><select id="b-pkg" class="field" style="width:auto"><option value="weekend">Five-Day Camp</option><option value="week" selected>Seven-Day Camp</option><option value="block">Ten-Day Performance Camp</option></select></label><span data-ka="ფასი ერთ ადამიანზეა მთელ ქემფზე.">Per person for the whole camp.</span><a class="btn solid" href="#dates" id="to-book" style="margin-left:auto" data-ka="გაგრძელება: თარიღის არჩევა">Continue: choose dates</a></div>
   </div>
 </section>
 
@@ -621,7 +622,11 @@ footer.foot .logo{font-size:1rem}
   fRoom.addEventListener("change",()=>{st=fRoom.value;calc()});
   pkgSel.addEventListener("change",()=>{fPkg.value=pkgSel.value});
   fPkg.addEventListener("change",()=>{if(PKGS[fPkg.value]){pkgSel.value=fPkg.value;showPlan(fPkg.value);calc()}});
-  document.getElementById("to-book").addEventListener("click",()=>{fPkg.value=pkgSel.value;fRoom.value=st});
+  const rows=[...document.querySelectorAll(".date-row")],dFilter=document.getElementById("date-filter");
+  function filterDates(k){rows.forEach(r=>{const a=r.querySelector("[data-pkg]");r.hidden=!!k&&a&&a.dataset.pkg!==k});dFilter.hidden=!k}
+  document.getElementById("date-all").addEventListener("click",()=>filterDates(null));
+  document.getElementById("to-book").addEventListener("click",()=>{fPkg.value=pkgSel.value;fRoom.value=st;filterDates(pkgSel.value)});
+  rows.forEach(r=>{const a=r.querySelector("[data-pkg]");if(a)a.addEventListener("click",()=>{fRoom.value=st})});
   const form=document.getElementById("req"),ok=document.getElementById("ok");
   form.addEventListener("submit",e=>{
     e.preventDefault();
