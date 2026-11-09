@@ -1,0 +1,685 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="All-inclusive padel and fitness camps in Tbilisi, Georgia: coaching, gym, hotel, tours and Georgian supra dinners. 10 players per group."><style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body><title>Supra Padel Camps</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@300;400;500;600&family=Noto+Serif+Georgian:wght@400;500&family=Noto+Sans+Georgian:wght@300;400;500&family=DM+Mono:wght@400&display=swap">
+<style>
+/* Layout: quiet dark-evergreen ground (Tbilisi at dusk), full-bleed photo bands, thin champagne rules; one gold accent used sparingly. Single deliberate dark theme. */
+:root{
+  --ground:#0e1613;      /* evergreen night */
+  --ground-2:#141f1b;
+  --panel:#1a2622;
+  --ivory:#efe9dd;
+  --mist:#a9b2ab;
+  --rule:#2c3a35;
+  --gold:#c8ad74;        /* champagne */
+  --gold-soft:#8f7b52;
+  --display:"Marcellus","Noto Serif Georgian",Georgia,serif;
+  --body:"Manrope","Noto Sans Georgian",system-ui,sans-serif;
+  --mono:"DM Mono",ui-monospace,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--ground);color:var(--ivory);font-family:var(--body);font-weight:300;font-size:16.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--ground)}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.12;text-wrap:balance;margin:0;letter-spacing:.005em}
+h2{font-size:clamp(2rem,4.2vw,3.2rem)}
+h3{font-size:1.45rem}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
+.eyebrow{font-family:var(--mono);font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.lead{color:var(--mist);max-width:60ch;font-size:1.06rem}
+section{padding-block:clamp(72px,10vw,128px)}
+.sec-head{display:grid;gap:18px;margin-bottom:56px;max-width:760px}
+.rule{width:48px;height:1px;background:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:500 .8rem var(--body);letter-spacing:.18em;text-transform:uppercase;padding:16px 30px;border:1px solid var(--gold);text-decoration:none;cursor:pointer;transition:background .25s,color .25s;background:transparent;color:var(--ivory)}
+.btn:hover{background:var(--gold);color:var(--ground)}
+.btn.solid{background:var(--gold);color:var(--ground)}
+.btn.solid:hover{background:var(--ivory);border-color:var(--ivory)}
+
+/* photo slots: swap --img for a real photo */
+.ph{position:relative;background-color:var(--panel);background-image:var(--img,linear-gradient(155deg,#22322c 0%,#16211d 60%,#101915 100%));background-size:cover;background-position:center;overflow:hidden;max-width:100%}
+.ph::after{content:attr(data-label);position:absolute;left:16px;bottom:14px;font:400 .68rem var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--mist);opacity:.75}
+.ph.has-img::after,.ph[style]::after{display:none}
+
+/* header */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(14,22,19,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;gap:28px;min-height:74px;flex-wrap:wrap}
+.logo{font:400 1.25rem var(--display);letter-spacing:.22em;text-transform:uppercase;text-decoration:none;display:flex;align-items:center;gap:12px}
+.logo i{width:9px;height:9px;border-radius:50%;background:var(--gold);display:block}
+nav.links{display:flex;gap:26px;margin-left:auto;flex-wrap:wrap}
+nav.links a{text-decoration:none;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mist);transition:color .2s}
+nav.links a:hover{color:var(--gold)}
+.lang{display:flex;gap:2px}
+.lang button{background:none;border:0;border-bottom:1px solid transparent;color:var(--mist);font:400 .75rem var(--mono);letter-spacing:.12em;padding:6px 8px;cursor:pointer}
+.lang button[aria-pressed="true"]{color:var(--gold);border-bottom-color:var(--gold)}
+@media (max-width:900px){nav.links{display:none}.lang{margin-left:auto}}
+
+/* hero */
+.hero{padding-block:0;position:relative}
+.hero .ph{min-height:clamp(520px,78vh,760px);display:flex;align-items:flex-end}
+.hero .ph::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,22,19,.15) 0%,rgba(14,22,19,.35) 45%,rgba(14,22,19,.96) 100%)}
+.hero .ph::after{top:20px;bottom:auto;right:16px;left:auto}
+.hero-in{position:relative;z-index:1;padding-block:72px 64px;width:100%}
+.hero h1{font-size:clamp(2.6rem,6.6vw,5.4rem);max-width:15ch;margin-top:22px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero .lead{margin-top:22px;color:#cfd3cc}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.trio div{padding:26px 24px;border-left:1px solid var(--rule);display:grid;gap:4px;min-width:0}
+.trio div:first-child{border-left:0}
+.trio b{font:400 .7rem var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.trio span{font-family:var(--display);font-size:1.2rem}
+@media (max-width:760px){.trio{grid-template-columns:1fr}.trio div{border-left:0;border-top:1px solid var(--rule)}.trio div:first-child{border-top:0}}
+
+/* three places */
+.places{display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:auto auto;gap:24px}
+.place{display:grid;gap:18px;align-content:start;min-width:0}
+.place .ph{aspect-ratio:4/3}
+.place.big{grid-row:span 2}
+.place.big .ph{aspect-ratio:auto;min-height:520px;height:100%}
+.place .meta{display:grid;gap:6px}
+.place .meta small{font:400 .7rem var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.place .meta p{color:var(--mist);font-size:.95rem;max-width:52ch}
+@media (max-width:860px){.places{grid-template-columns:1fr}.place.big{grid-row:auto}.place.big .ph{min-height:0;aspect-ratio:4/3}}
+
+/* packages */
+.pkgs{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--rule)}
+@media (max-width:960px){.pkgs{grid-template-columns:1fr}}
+.pkg{padding:40px 34px;display:flex;flex-direction:column;gap:20px;border-left:1px solid var(--rule);min-width:0;position:relative}
+.pkg:first-child{border-left:0}
+@media (max-width:960px){.pkg{border-left:0;border-top:1px solid var(--rule)}.pkg:first-child{border-top:0}}
+.pkg.feature{background:var(--ground-2)}
+.pkg.feature::before{content:"";position:absolute;top:-1px;left:-1px;right:-1px;height:2px;background:var(--gold)}
+.pkg .dur{font:400 .72rem var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--mist)}
+.pkg .tag{font:400 .68rem var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.price{display:flex;align-items:baseline;gap:10px;padding-block:6px 4px;border-bottom:1px solid var(--rule)}
+.price small{color:var(--mist);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase}
+.price b{font:400 2.5rem var(--display);font-variant-numeric:tabular-nums}
+.price em{font-style:normal;color:var(--mist);font-size:.82rem}
+.seats{font:400 .7rem var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.pkg ul{list-style:none;margin:0;padding:0;display:grid;gap:12px;font-size:.95rem;color:#d6d8d1}
+.pkg li{display:grid;grid-template-columns:20px 1fr;gap:8px}
+.pkg li::before{content:"";width:12px;height:1px;background:var(--gold);margin-top:13px}
+.pkg .btn{margin-top:auto}
+
+/* included */
+.incl{display:grid;grid-template-columns:repeat(3,1fr);gap:48px 36px}
+@media (max-width:960px){.incl{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.incl{grid-template-columns:1fr}}
+.incl div{display:grid;gap:8px;align-content:start;padding-top:18px;border-top:1px solid var(--rule);min-width:0}
+.incl b{font:400 1.2rem var(--display)}
+.incl span{color:var(--mist);font-size:.93rem}
+
+/* week */
+.week{border-top:1px solid var(--rule)}
+.day{display:grid;grid-template-columns:140px 1fr 1fr 1fr;gap:28px;padding-block:24px;border-bottom:1px solid var(--rule);align-items:start}
+.day>*{min-width:0}
+.day .d{font:400 1.35rem var(--display)}
+.day .d small{display:block;font:400 .68rem var(--mono);color:var(--gold);letter-spacing:.2em;margin-top:4px}
+.slot{font-size:.95rem;color:#d6d8d1}
+.slot em{display:block;font-style:normal;font:400 .66rem var(--mono);color:var(--mist);letter-spacing:.2em;text-transform:uppercase;margin-bottom:4px}
+@media (max-width:780px){.day{grid-template-columns:1fr;gap:10px}}
+
+/* gallery strip */
+.strip{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding-block:0}
+.strip .ph{aspect-ratio:4/5}
+.strip .ph{aspect-ratio:16/11}
+
+
+/* builder */
+.builder{display:grid;grid-template-columns:1.35fr .65fr;gap:40px;align-items:start}
+@media (max-width:960px){.builder{grid-template-columns:1fr}}
+.addons{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--rule)}
+@media (max-width:600px){.addons{grid-template-columns:1fr}}
+.addon{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:start;padding:20px 16px 20px 0;border-bottom:1px solid var(--rule);cursor:pointer;transition:color .2s}
+.addon:nth-child(odd){padding-right:28px}
+.addon input{appearance:none;width:16px;height:16px;border:1px solid var(--gold-soft);margin-top:5px;cursor:pointer;display:grid;place-content:center}
+.addon input:checked{background:var(--gold);border-color:var(--gold)}
+.addon input:checked::after{content:"";width:6px;height:6px;background:var(--ground)}
+.addon b{display:block;font:400 1.08rem var(--display)}
+.addon span{font-size:.86rem;color:var(--mist)}
+.addon .ap{font:400 .82rem var(--mono);white-space:nowrap;color:var(--gold);font-variant-numeric:tabular-nums}
+.summary{position:sticky;top:calc(env(safe-area-inset-top,0px) + 96px);background:var(--ground-2);border:1px solid var(--rule);padding:32px;display:grid;gap:18px}
+.summary label{font:400 .7rem var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--mist);display:grid;gap:8px}
+.field{font:400 1rem var(--body);padding:12px 0;border:0;border-bottom:1px solid var(--gold-soft);background:transparent;color:var(--ivory);width:100%;border-radius:0}
+select.field option{background:var(--ground-2);color:var(--ivory)}
+.field:focus{outline:none;border-bottom-color:var(--gold)}
+.summary .row{display:flex;justify-content:space-between;gap:12px;font-size:.9rem;color:var(--mist);font-variant-numeric:tabular-nums}
+.summary .total{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--rule);padding-top:18px;gap:12px}
+.summary .total span{font:400 .7rem var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--mist)}
+.summary .total b{font:400 2.2rem var(--display);color:var(--gold);font-variant-numeric:tabular-nums}
+.summary .fine{font-size:.8rem;color:var(--mist)}
+
+/* upcoming dates */
+.dates{border-top:1px solid var(--rule)}
+.date-row{display:grid;grid-template-columns:1.1fr 1.2fr 1.3fr auto;gap:24px;align-items:center;padding-block:22px;border-bottom:1px solid var(--rule)}
+.date-row>*{min-width:0}
+.date-row .when{font:400 1.3rem var(--display)}
+.date-row .what{color:var(--mist);font-size:.95rem}
+.seatbar{display:grid;gap:8px}
+.seatbar .pips{display:flex;gap:5px;flex-wrap:wrap}
+.seatbar .pips i{width:14px;height:14px;border:1px solid var(--gold-soft);display:block}
+.seatbar .pips i.taken{background:var(--gold-soft);border-color:var(--gold-soft);opacity:.45}
+.seatbar small{font:400 .7rem var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.seatbar small.low{color:#e3a07a}
+.date-row .btn{padding:12px 20px}
+@media (max-width:860px){.date-row{grid-template-columns:1fr;gap:10px}}
+
+/* marquee */
+.marquee{overflow:hidden;border-block:1px solid var(--rule);padding-block:22px;white-space:nowrap}
+.marquee-track{display:inline-flex;gap:48px;animation:slide 40s linear infinite;padding-left:48px}
+.marquee span{font:400 clamp(1.4rem,3vw,2.2rem) var(--display);color:var(--ivory)}
+.marquee span.d{color:var(--gold)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* stays */
+.stays{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+@media (max-width:1000px){.stays{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.stays{grid-template-columns:1fr}}
+.stay{position:relative;display:flex;flex-direction:column;border:1px solid var(--rule);transition:border-color .2s;min-width:0}
+.stay:hover{border-color:var(--gold-soft)}
+.stay:has(input:checked){border-color:var(--gold);box-shadow:inset 0 0 0 1px var(--gold)}
+.stay input{position:absolute;opacity:0;pointer-events:none}
+.stay .ph{aspect-ratio:4/3}
+.stay .ph::after{display:block!important;content:attr(data-cap);background:rgba(14,22,19,.7);padding:3px 8px;left:10px;bottom:10px}
+.stay .body{padding:24px 24px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.stay .occ{font:400 .68rem var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--mist)}
+.stay h3{font-size:1.2rem}
+.stay p{color:var(--mist);font-size:.9rem}
+.stay .sp{margin-top:auto;padding-top:12px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.stay .sp b{font:400 1.5rem var(--display);font-variant-numeric:tabular-nums}
+.stay .sp small{font-size:.78rem;color:var(--mist)}
+.stay .chk{position:absolute;top:18px;right:18px;width:22px;height:22px;border-radius:50%;border:1px solid var(--gold-soft);background:transparent;display:grid;place-content:center;z-index:2}
+.stay:has(input:checked) .chk{background:var(--gold);border-color:var(--gold)}
+.stay:has(input:checked) .chk::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--ground)}
+.opt{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 14px;border:1px solid var(--rule);cursor:pointer;transition:border-color .2s}
+.opt:hover{border-color:var(--gold-soft)}
+.opt:has(input:checked){border-color:var(--gold);background:rgba(200,173,116,.08)}
+.opt span{font-size:.9rem;color:var(--ivory)}
+.opt span small{display:block;font:400 .66rem var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mist)}
+.opt b{font:400 1.35rem var(--display);font-variant-numeric:tabular-nums;white-space:nowrap}
+.opts{display:grid;gap:8px;margin-top:auto;padding-top:12px}
+.stay-note{color:var(--mist);font-size:.88rem;margin-top:20px}
+.alt-price{font-size:.82rem;color:var(--mist);margin-top:-8px}
+
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media (max-width:760px){.gallery{grid-template-columns:1fr 1fr}}
+.gimg{margin:0;display:grid;gap:8px;min-width:0}
+.gimg .ph{aspect-ratio:4/3}
+.gimg figcaption{font:400 .68rem var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--mist)}
+/* reasons */
+.reasons{display:grid;grid-template-columns:repeat(5,1fr);gap:32px}
+@media (max-width:1000px){.reasons{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.reasons{grid-template-columns:1fr}}
+.reason{display:grid;gap:10px;align-content:start}
+.reason .n{font:400 .72rem var(--mono);color:var(--gold);letter-spacing:.2em}
+.reason p{color:var(--mist);font-size:.93rem}
+
+/* quotes */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+@media (max-width:900px){.quotes{grid-template-columns:1fr}}
+.quote{margin:0;display:grid;gap:18px;align-content:start;padding-top:22px;border-top:1px solid var(--rule)}
+.quote p{font:400 1.25rem/1.45 var(--display)}
+.quote footer{font:400 .72rem var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--mist)}
+.sample-note{font:400 .72rem var(--mono);color:var(--mist);margin-top:28px;letter-spacing:.08em}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
+@media (max-width:860px){.faq-grid{grid-template-columns:1fr;gap:24px}}
+.faq{border-top:1px solid var(--rule)}
+.faq details{border-bottom:1px solid var(--rule);padding-block:20px}
+.faq summary{font:400 1.15rem var(--display);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--gold);font-family:var(--body);font-weight:300;font-size:1.4rem;line-height:1}
+.faq details[open] summary::after{content:"−"}
+.faq p{color:var(--mist);margin-top:12px;max-width:64ch}
+
+/* booking */
+.book{background:var(--ground-2);border-top:1px solid var(--rule)}
+.book-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px}
+@media (max-width:900px){.book-grid{grid-template-columns:1fr;gap:32px}}
+form.req{display:grid;grid-template-columns:1fr 1fr;gap:28px 28px}
+form.req .full{grid-column:1/-1}
+form.req label{display:grid;gap:4px;font:400 .7rem var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--mist)}
+form.req textarea.field{min-height:96px;resize:vertical}
+.field::placeholder{color:#5f6b65}
+@media (max-width:620px){form.req{grid-template-columns:1fr}}
+.ok{margin-top:24px;border-left:1px solid var(--gold);padding:6px 0 6px 18px;color:var(--ivory)}
+.contact{display:grid;gap:18px;margin-top:36px}
+.contact div{display:grid;gap:2px}
+.contact b{font:400 .68rem var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+
+footer.foot{padding-block:48px;font-size:.85rem;color:var(--mist);border-top:1px solid var(--rule)}
+footer.foot .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer.foot .logo{font-size:1rem}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top"><i></i>Supra Padel</a>
+    <nav class="links" aria-label="Main">
+      <a href="#venues" data-ka="ლოკაციები">Venues</a>
+      <a href="#dates" data-ka="თარიღები">Dates</a>
+      <a href="#camps" data-ka="პაკეტები">Camps</a>
+      <a href="#stay" data-ka="ნომრები">Stay</a>
+            <a href="#build" data-ka="დამატებები">Experiences</a>
+      <a href="#faq" data-ka="კითხვები">FAQ</a>
+      <a href="#book" data-ka="დაჯავშნა">Reserve</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" id="lang-en" aria-pressed="true">EN</button>
+      <button type="button" id="lang-ka" aria-pressed="false">ქარ</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="ph" data-label="Ramada Tbilisi Old City" data-photo="court-hero" style="--img:url('https://images.trvl-media.com/lodging/71000000/70080000/70077100/70077024/75267061.jpg?impolicy=fcrop&w=1920&h=1080')">
+    <div class="wrap hero-in">
+      <p class="eyebrow" data-ka="პადელი · ფიზიკური მომზადება · თბილისი · 10 ადგილი ჯგუფში">Padel · Performance · Tbilisi · 10 places per group</p>
+      <h1 data-ka-html="პადელის ქემფი, <em>სადაც ყველა დეტალი</em> გათვალისწინებულია">The padel retreat <em>where every detail</em> is taken care of</h1>
+      <p class="lead" data-ka="ელიტური ქოუჩინგი Padelbade Krtsanisi-ზე, ფიზიკური მომზადება Oktopus Mziuri-ში და ცხოვრება Ramada by Wyndham Tbilisi Old City-ში, ძველ თბილისში. ტურები, ქართული სუფრა და ტრანსფერები — ერთ პაკეტში.">Elite coaching at Padelbade Krtsanisi, conditioning at Oktopus Mziuri and your stay at Ramada by Wyndham Tbilisi Old City. Tours, Georgian supra dinners and private transfers, arranged as one.</p>
+      <div class="hero-cta">
+        <a class="btn solid" href="#camps" data-ka="პაკეტები">View the camps</a>
+        <a class="btn" href="#book" data-ka="მოთხოვნა">Request dates</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="trio">
+      <div><b data-ka="კორტი">Court</b><span>Padelbade Krtsanisi</span></div>
+      <div><b data-ka="დარბაზი">Gym</b><span>Oktopus Mziuri Club</span></div>
+      <div><b data-ka="სასტუმრო">Stay</b><span>Ramada Tbilisi Old City</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="dates" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow" data-ka="ახლო ქემფები">Upcoming camps</p>
+      <h2 data-ka="აირჩიე თარიღი">Choose your dates</h2>
+      <p class="lead" data-ka="თითო ჯგუფში 10 ადგილია. როცა ადგილები ივსება, თარიღი იხურება.">Each camp takes 10 players. When the places are gone, the dates close.</p>
+    </div>
+    <div class="dates">
+      <div class="date-row"><p class="when">12 – 16 April 2027</p><p class="what" data-ka="5-დღიანი ქემფი">The Five-Day Camp</p><div class="seatbar"><div class="pips" aria-hidden="true"><i class="taken"></i><i class="taken"></i><i class="taken"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small class="" data-ka="7 ადგილი დარჩა 10-დან">7 of 10 places left</small></div><a class="btn" href="#stay" data-pkg="weekend" data-date="12 – 16 April 2027" data-ka="დაჯავშნა">Reserve</a></div>
+      <div class="date-row"><p class="when">3 – 9 May 2027</p><p class="what" data-ka="7-დღიანი ქემფი">The Seven-Day Camp</p><div class="seatbar"><div class="pips" aria-hidden="true"><i class="taken"></i><i class="taken"></i><i class="taken"></i><i class="taken"></i><i class="taken"></i><i class="taken"></i><i></i><i></i><i></i><i></i></div><small class="" data-ka="4 ადგილი დარჩა 10-დან">4 of 10 places left</small></div><a class="btn" href="#stay" data-pkg="week" data-date="3 – 9 May 2027" data-ka="დაჯავშნა">Reserve</a></div>
+      <div class="date-row"><p class="when">7 – 13 June 2027</p><p class="what" data-ka="7-დღიანი ქემფი">The Seven-Day Camp</p><div class="seatbar"><div class="pips" aria-hidden="true"><i class="taken"></i><i class="taken"></i><i class="taken"></i><i class="taken"></i><i class="taken"></i><i class="taken"></i><i class="taken"></i><i class="taken"></i><i class="taken"></i><i></i></div><small class="low" data-ka="1 ადგილი დარჩა 10-დან">1 of 10 places left</small></div><a class="btn" href="#stay" data-pkg="week" data-date="7 – 13 June 2027" data-ka="დაჯავშნა">Reserve</a></div>
+      <div class="date-row"><p class="when">13 – 22 September 2027</p><p class="what" data-ka="10-დღიანი პერფორმანს ქემფი">The Ten-Day Performance Camp</p><div class="seatbar"><div class="pips" aria-hidden="true"><i class="taken"></i><i class="taken"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small class="" data-ka="8 ადგილი დარჩა 10-დან">8 of 10 places left</small></div><a class="btn" href="#stay" data-pkg="block" data-date="13 – 22 September 2027" data-ka="დაჯავშნა">Reserve</a></div>
+      <div class="date-row"><p class="when">4 – 10 October 2027</p><p class="what" data-ka="7-დღიანი ქემფი">The Seven-Day Camp</p><div class="seatbar"><div class="pips" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small class="" data-ka="10 ადგილი დარჩა 10-დან">10 of 10 places left</small></div><a class="btn" href="#stay" data-pkg="week" data-date="4 – 10 October 2027" data-ka="დაჯავშნა">Reserve</a></div>
+    </div>
+    <p class="sample-note" data-ka="თარიღები და ადგილები ნიმუშია.">Dates and availability shown are samples.</p>
+  </div>
+</section>
+
+<section id="venues">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow" data-ka="სამი ლოკაცია">Three venues</p>
+      <h2 data-ka="სადაც ითამაშებ, ივარჯიშებ და დაისვენებ">Where you play, train and rest</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="places">
+      <article class="place big">
+        <div class="ph" data-label="Padelbade Krtsanisi" style="--img:url('https://pado.app/api/media/file/Padelbade%20Krtsanisi.webp')"></div>
+        <div class="meta"><small data-ka="კორტები">The courts</small><h3>Padelbade Krtsanisi</h3><p data-ka="პადელის კლუბი კრწანისში, სადაც ყოველდღიური ქოუჩინგი, ტაქტიკური სესიები და ქემფის ტურნირი ტარდება.">The padel club in Krtsanisi where daily coaching, tactical sessions and the camp tournament take place.</p></div>
+      </article>
+      <article class="place">
+        <div class="ph" data-label="Oktopus Mziuri Club" style="--img:url('https://oktopus.ge/wp-content/uploads/2025/08/main-1536x1024.jpg')"></div>
+        <div class="meta"><small data-ka="დარბაზი">The gym</small><h3>Oktopus Mziuri Club</h3><p data-ka="ფიზიკური მომზადება, მობილობა და აღდგენა პადელისთვის სპეციფიკური პროგრამით.">Strength, mobility and recovery work built around the way padel players move.</p></div>
+      </article>
+      <article class="place">
+        <div class="ph" data-label="Ramada Tbilisi Old City" style="--img:url('https://images.trvl-media.com/lodging/71000000/70080000/70077100/70077024/75267061.jpg?impolicy=fcrop&w=1400&h=933')"></div>
+        <div class="meta"><small data-ka="სასტუმრო">The stay</small><h3>Ramada by Wyndham Tbilisi Old City</h3><p data-ka="ოთხვარსკვლავიანი სასტუმრო ავლაბარში, სამების ტაძართან და მეტეხთან ახლოს. დახურული და გარე აუზი, სპა, საუნა და დარბაზი.">A four-star hotel in Avlabari, close to Holy Trinity Cathedral and Metekhi. Indoor and outdoor pools, spa, sauna and gym.</p></div>
+      </article>
+    </div>
+  </div>
+  <div class="wrap"><p class="eyebrow" style="margin:56px 0 18px" data-ka="Ramada Tbilisi Old City · სასტუმრო">Ramada Tbilisi Old City · the hotel</p><div class="gallery"><figure class="gimg"><div class="ph" style="--img:url('https://images.trvl-media.com/lodging/71000000/70080000/70077100/70077024/514935d1.jpg?impolicy=fcrop&w=800&h=600')"></div><figcaption data-ka="დახურული აუზი">Indoor pool</figcaption></figure><figure class="gimg"><div class="ph" style="--img:url('https://images.trvl-media.com/lodging/71000000/70080000/70077100/70077024/4df68a36.jpg?impolicy=fcrop&w=800&h=600')"></div><figcaption data-ka="ლობი">Lobby</figcaption></figure><figure class="gimg"><div class="ph" style="--img:url('https://images.trvl-media.com/lodging/71000000/70080000/70077100/70077024/e03f4d1d.jpg?impolicy=fcrop&w=800&h=600')"></div><figcaption data-ka="მარანი">Wine cellar</figcaption></figure><figure class="gimg"><div class="ph" style="--img:url('https://images.trvl-media.com/lodging/71000000/70080000/70077100/70077024/3d095dc2.jpg?impolicy=fcrop&w=800&h=600')"></div><figcaption data-ka="რესტორანი">Restaurant</figcaption></figure></div></div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Padel above Tbilisi</span><span class="d">·</span><span>Supra after sunset</span><span class="d">·</span><span>Ten players. One table.</span><span class="d">·</span><span>Train · Recover · Feast</span><span class="d">·</span><span>Padel above Tbilisi</span><span class="d">·</span><span>Supra after sunset</span><span class="d">·</span><span>Ten players. One table.</span><span class="d">·</span><span>Train · Recover · Feast</span><span class="d">·</span></div></div>
+
+<section id="camps" style="background:var(--ground-2)">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow" data-ka="ყოვლისმომცველი პაკეტები">All-inclusive camps</p>
+      <h2 data-ka="აირჩიე შენი ქემფი">Choose your camp</h2>
+      <p class="lead" data-ka="ფასი ერთ ადამიანზეა, Standard Twin ნომერში ორზე. თითო ჯგუფში მაქსიმუმ 10 მოთამაშეა, ასე რომ ქოუჩს კორტზე 4-ზე მეტი მოთამაშე არ ჰყავს. შედის სასტუმრო საუზმით, კერძო ტრანსფერები, კორტები, ქოუჩები და დარბაზი.">Prices per person, sharing a Standard Twin room. Every group is capped at 10 players, so each coach works with four players per court at most. Hotel with breakfast, private transfers, courts, coaches and gym access are included.</p>
+    </div>
+    <div class="pkgs">
+      <article class="pkg">
+        <p class="dur" data-ka="5 დღე · 4 ღამე · 4 სავარჯიშო დღე">5 days · 4 nights · 4 training days</p>
+        <h3 data-ka="5-დღიანი ქემფი">The Five-Day Camp</h3>
+        <div class="price"><small data-ka="დან">from</small><b data-from>€1,690</b></div>
+        <p class="alt-price" data-ka="მხოლოდ პროგრამა, სასტუმროს გარეშე: €865-დან">Program only, no hotel: from €865</p>
+        <p class="seats" data-ka="მაქს. 10 მოთამაშე ჯგუფში">Max 10 players per group</p>
+        <ul>
+          <li data-ka="12 სთ ჯგუფური ქოუჩინგი">12 h group coaching</li>
+          <li data-ka="4 სესია დარბაზში">4 gym sessions</li>
+          <li data-ka="ძველი თბილისის კერძო ტური">Private Old Tbilisi tour</li>
+          <li data-ka="2 ქართული სუფრა">2 supra dinners</li>
+        </ul>
+        <a class="btn" href="#book" data-pkg="weekend" data-ka="მოთხოვნა">Request dates</a>
+      </article>
+      <article class="pkg feature">
+        <p class="tag" data-ka="ყველაზე მოთხოვნადი">Most requested</p>
+        <p class="dur" data-ka="7 დღე · 6 ღამე · 5 სავარჯიშო დღე">7 days · 6 nights · 5 training days</p>
+        <h3 data-ka="7-დღიანი ქემფი">The Seven-Day Camp</h3>
+        <div class="price"><small data-ka="დან">from</small><b data-from>€2,490</b></div>
+        <p class="alt-price" data-ka="მხოლოდ პროგრამა, სასტუმროს გარეშე: €1,510-დან">Program only, no hotel: from €1,510</p>
+        <p class="seats" data-ka="მაქს. 10 მოთამაშე ჯგუფში">Max 10 players per group</p>
+        <ul>
+          <li data-ka="18 სთ ქოუჩინგი">18 h coaching</li>
+          <li data-ka="6 ფიზ. მომზადების და მობილობის სესია">6 strength and mobility sessions</li>
+          <li data-ka="მცხეთა და კახეთის ღვინის დღე">Mtskheta and a Kakheti wine day</li>
+          <li data-ka="3 სუფრა + ქემფის ტურნირი">3 supra dinners + camp tournament</li>
+          <li data-ka="1 გოგირდის აბანოს სეანსი">1 sulfur bath session</li>
+        </ul>
+        <a class="btn solid" href="#book" data-pkg="week" data-ka="მოთხოვნა">Request dates</a>
+      </article>
+      <article class="pkg">
+        <p class="dur" data-ka="10 დღე · 9 ღამე · 8 სავარჯიშო დღე">10 days · 9 nights · 8 training days</p>
+        <h3 data-ka="10-დღიანი პერფორმანს ქემფი">The Ten-Day Performance Camp</h3>
+        <div class="price"><small data-ka="დან">from</small><b data-from>€3,590</b></div>
+        <p class="alt-price" data-ka="მხოლოდ პროგრამა, სასტუმროს გარეშე: €2,220-დან">Program only, no hotel: from €2,220</p>
+        <p class="seats" data-ka="მაქს. 10 მოთამაშე ჯგუფში">Max 10 players per group</p>
+        <ul>
+          <li data-ka="24 სთ ქოუჩინგი, 2 ინდივიდუალური გაკვეთილი">24 h coaching incl. 2 private lessons</li>
+          <li data-ka="ფიზიკური ტესტირება და პერსონალური გეგმა">Fitness testing and a personal plan</li>
+          <li data-ka="ყაზბეგის ტური">Kazbegi mountain day</li>
+          <li data-ka="2 სპორტული მასაჟი">2 sports massages</li>
+        </ul>
+        <a class="btn" href="#book" data-pkg="block" data-ka="მოთხოვნა">Request dates</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow" data-ka="რა შედის">Included</p>
+      <h2 data-ka="ერთი ჯავშანი. არანაირი ლოჯისტიკა.">One reservation. No logistics.</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="incl">
+      <div><b data-ka="პადელის ქოუჩინგი">Padel coaching</b><span data-ka="სერტიფიცირებული ქოუჩები, მაქს. 4 მოთამაშე კორტზე, დონის მიხედვით.">Certified coaches, four players per court at most, grouped by level.</span></div>
+      <div><b data-ka="ფიზიკური მომზადება">Performance training</b><span data-ka="სიჩქარე, მობილობა და ტრავმების პრევენცია პადელისთვის.">Speed, mobility and injury prevention specific to padel.</span></div>
+      <div><b data-ka="სასტუმრო ცენტრში">Central hotel</b><span data-ka="Ramada Tbilisi Old City, საუზმით, აუზით და სპა-თი. ნომრის ტიპს თავად ირჩევ.">Ramada Tbilisi Old City with breakfast, pools and spa. You choose the room type.</span></div>
+      <div><b data-ka="ქართული სუფრა">Supra dinners</b><span data-ka="ადგილობრივი ღვინო და ქართული სამზარეულო.">Local wine and regional Georgian cooking.</span></div>
+      <div><b data-ka="კერძო ტურები">Private tours</b><span data-ka="ძველი თბილისი, მცხეთა, კახეთი ან ყაზბეგი.">Old Tbilisi, Mtskheta, Kakheti or Kazbegi.</span></div>
+      <div><b data-ka="კერძო ტრანსფერები">Private transfers</b><span data-ka="აეროპორტი, კორტი, დარბაზი და ტურები — მძღოლით.">Airport, courts, gym and tours, all chauffeured.</span></div>
+      <div><b data-ka="აღდგენა ყოველდღე">Daily recovery</b><span data-ka="აუზი სასტუმროში და დილის მობილობა/იოგა.">Hotel pool access and a morning mobility or yoga class.</span></div>
+      <div><b data-ka="მისასალმებელი პაკეტი">Welcome pack</b><span data-ka="ქემფის ფორმა, ბიდონი და ქართული ტკბილეული ნომერში.">Camp kit, a bottle and Georgian treats waiting in your room.</span></div>
+      <div><b data-ka="პროფესიონალური ფოტოები">Pro photography</b><span data-ka="ფოტოგრაფი ტურნირზე და სუფრაზე. ფოტოები წასვლამდე.">A photographer at the tournament and the supra. Photos before you fly home.</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap strip" aria-hidden="true">
+
+  <div class="ph" data-label="Photo · Krtsanisi court" data-photo="court-2" style="--img:url('https://pado.app/api/media/file/Padelbade%20Krtsanisi.webp');background-position:0% 50%"></div>
+  <div class="ph" data-label="Photo · Mziuri gym" data-photo="gym-2" style="--img:url('https://oktopus.ge/wp-content/uploads/2025/03/PERSONAL-TRAINING-1536x1024.jpg')"></div>
+</div>
+
+<section id="week">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow" data-ka="7-დღიანი ქემფი · დღიდან დღემდე">The Seven-Day Camp · day by day</p>
+      <h2 data-ka="როგორ გადის კვირა">How the week unfolds</h2>
+      <p class="lead" data-ka="სავარაუდო განრიგი. დროებს ჯგუფის დონესა და ამინდს ვუსადაგებთ.">A sample schedule, tuned to your group's level and the weather.</p>
+    </div>
+    <div class="week">
+      <div class="day"><p class="d" data-ka-html="დღე 1<small>ჩამოსვლა</small>">Day 1<small>ARRIVAL</small></p><p class="slot"><em>Day</em><span data-ka="კერძო ტრანსფერი, ჩაბარება სასტუმროში">Private transfer, hotel check-in</span></p><p class="slot"><em>Court</em><span data-ka="დონის შეფასება Krtsanisi-ზე">Level assessment at Krtsanisi</span></p><p class="slot"><em>Evening</em><span data-ka="მისასალმებელი ვახშამი">Welcome dinner</span></p></div>
+      <div class="day"><p class="d" data-ka-html="დღე 2<small>საფუძვლები</small>">Day 2<small>FOUNDATIONS</small></p><p class="slot"><em>Court · 3 h</em><span data-ka="ფორჰენდი, ბექჰენდი, კედლიდან თამაში">Forehand, backhand, playing off the glass</span></p><p class="slot"><em>Gym · 1 h</em><span data-ka="მოძრაობა და ფეხის მუშაობა">Movement and footwork</span></p><p class="slot"><em>Evening</em><span data-ka="ძველი თბილისის ტური">Old Tbilisi tour</span></p></div>
+      <div class="day"><p class="d" data-ka-html="დღე 3<small>ბადესთან</small>">Day 3<small>AT THE NET</small></p><p class="slot"><em>Court · 3 h</em><span data-ka="ვოლეი, ბანდეხა, ვიბორა">Volleys, bandeja, víbora</span></p><p class="slot"><em>Gym · 1 h</em><span data-ka="სიძლიერე და პრევენცია">Strength and prevention</span></p><p class="slot"><em>Evening</em><span data-ka="სუფრა I">Supra I</span></p></div>
+      <div class="day"><p class="d" data-ka-html="დღე 4<small>დასვენება</small>">Day 4<small>REST DAY</small></p><p class="slot"><em>Day</em><span data-ka="მცხეთა და კახეთის ღვინის ტური">Mtskheta and Kakheti wine tour</span></p><p class="slot"><em>Recovery</em><span data-ka="გოგირდის აბანო">Sulfur baths</span></p><p class="slot"><em>Evening</em><span data-ka="ვახშამი მარანში">Dinner at a winery</span></p></div>
+      <div class="day"><p class="d" data-ka-html="დღე 5<small>ტაქტიკა</small>">Day 5<small>TACTICS</small></p><p class="slot"><em>Court · 3 h</em><span data-ka="პოზიციონირება, ლობი, წყვილში თამაში">Positioning, lobs, pair play</span></p><p class="slot"><em>Gym · 1 h</em><span data-ka="სიჩქარე და აგილითი">Speed and agility</span></p><p class="slot"><em>Evening</em><span data-ka="თავისუფალი საღამო">Evening at leisure</span></p></div>
+      <div class="day"><p class="d" data-ka-html="დღე 6<small>ტურნირი</small>">Day 6<small>TOURNAMENT</small></p><p class="slot"><em>Court · 4 h</em><span data-ka="ქემფის ტურნირი">Camp tournament</span></p><p class="slot"><em>Recovery</em><span data-ka="აუზი და სტრეჩინგი">Pool and stretching</span></p><p class="slot"><em>Evening</em><span data-ka="დაჯილდოება და გამოსამშვიდობებელი სუფრა III">Awards and farewell Supra III</span></p></div>
+      <div class="day"><p class="d" data-ka-html="დღე 7<small>წასვლა</small>">Day 7<small>DEPARTURE</small></p><p class="slot"><em>Court · 1.5 h</em><span data-ka="თავისუფალი თამაში">Open play</span></p><p class="slot"><em>Day</em><span data-ka="საუზმე და კერძო ტრანსფერი">Breakfast and private transfer</span></p><p class="slot"></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="stay">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow" data-ka="აირჩიე ნომერი">Select your stay</p>
+      <h2 data-ka="სად დარჩები">Where you'll sleep</h2>
+      <p class="lead" data-ka="ჯგუფი ცხოვრობს Ramada by Wyndham Tbilisi Old City-ში, ავლაბარში. ფასი ერთ ადამიანზეა და მოიცავს მთელ პროგრამას და საუზმეს.">The group stays at Ramada by Wyndham Tbilisi Old City in Avlabari. Prices are per person and include the full camp program and breakfast.</p>
+    </div>
+    <div class="stays" role="radiogroup" aria-label="Room type">
+      <div class="stay">
+        <div class="ph" style="--img:url('https://pado.app/api/media/file/Padelbade%20Krtsanisi.webp');background-position:0% 50%" data-cap="Padelbade Krtsanisi"></div>
+        <div class="body"><p class="occ" data-ka="პროგრამა სასტუმროს გარეშე">Program only</p><h3 data-ka="საკუთარი საცხოვრებელი">Own accommodation</h3><p data-ka="ყველაფერი შედის, გარდა სასტუმროსი. ტრანსფერები თბილისის ცენტრიდან.">Everything except the hotel. Transfers from central Tbilisi.</p>
+        <div class="opts"><label class="opt" for="st-own"><input type="radio" name="stay" id="st-own" value="own"><span><span data-ka="სასტუმროს გარეშე">No hotel</span><small data-ka="ერთ ადამიანზე">per person</small></span><b data-stay-price="own">€0</b></label></div></div></div>
+      <div class="stay">
+        <div class="ph" style="--img:url('https://images.trvl-media.com/lodging/71000000/70080000/70077100/70077024/90dbd881.jpg?impolicy=fcrop&w=800&h=600')" data-cap="Standard Room"></div>
+        <div class="body"><p class="occ" data-ka="Standard ნომერი · აივანი">Standard room · balcony</p><h3 data-ka="Standard ნომერი">Standard Room</h3><p data-ka="გაიზიარე მეგობართან ან ქემფის სხვა მოთამაშესთან, ან აიღე ნომერი მარტო.">Share with a friend or another player of the camp, or take the room for yourself.</p>
+        <div class="opts"><label class="opt" for="st-std2"><input type="radio" name="stay" id="st-std2" value="std2" checked><span><span data-ka="ორზე, ცალ-ცალკე საწოლები">Shared, twin beds</span><small data-ka="ერთ ადამიანზე">per person</small></span><b data-stay-price="std2">€0</b></label><label class="opt" for="st-std1"><input type="radio" name="stay" id="st-std1" value="std1"><span><span data-ka="მხოლოდ ჩემთვის">Room to myself</span><small data-ka="ერთზე">single occupancy</small></span><b data-stay-price="std1">€0</b></label></div></div></div>
+      <div class="stay">
+        <div class="ph" style="--img:url('https://images.trvl-media.com/lodging/71000000/70080000/70077100/70077024/b03948df.jpg?impolicy=fcrop&w=800&h=600')" data-cap="Deluxe Room"></div>
+        <div class="body"><p class="occ" data-ka="Deluxe ნომერი · დიდი საწოლი">Deluxe room · king bed</p><h3 data-ka="Deluxe ნომერი">Deluxe Room</h3><p data-ka="უფრო დიდი ნომერი. პარტნიორთან ერთად, ან მარტო.">A larger room. Share with your partner, or keep it to yourself.</p>
+        <div class="opts"><label class="opt" for="st-dlx2"><input type="radio" name="stay" id="st-dlx2" value="dlx2"><span><span data-ka="ორზე, წყვილი">Shared, couple</span><small data-ka="ერთ ადამიანზე">per person</small></span><b data-stay-price="dlx2">€0</b></label><label class="opt" for="st-dlx1"><input type="radio" name="stay" id="st-dlx1" value="dlx1"><span><span data-ka="მხოლოდ ჩემთვის">Room to myself</span><small data-ka="ერთზე">single occupancy</small></span><b data-stay-price="dlx1">€0</b></label></div></div></div>
+      <div class="stay">
+        <div class="ph" style="--img:url('https://images.trvl-media.com/lodging/71000000/70080000/70077100/70077024/6b03d9dc.jpg?impolicy=fcrop&w=800&h=600')" data-cap="Family Room"></div>
+        <div class="body"><p class="occ" data-ka="Family ნომერი · 3 ადამიანი">Family room · 3 guests</p><h3 data-ka="Family ნომერი">Family Room</h3><p data-ka="დიდი და ერთადგილიანი საწოლი. საუკეთესო ფასი სამი მეგობრისთვის.">A king and a single bed. Best value for three friends.</p>
+        <div class="opts"><label class="opt" for="st-fam3"><input type="radio" name="stay" id="st-fam3" value="fam3"><span><span data-ka="სამზე">Shared by three</span><small data-ka="ერთ ადამიანზე">per person</small></span><b data-stay-price="fam3">€0</b></label></div></div></div>
+    </div>
+    <p class="stay-note" data-ka="ფასი ერთ ადამიანზეა მთელ ქემფზე და იცვლება, როცა ქვემოთ პაკეტს ირჩევ.">Prices are per person for the whole camp. They update when you change the camp length in the planner below.</p>
+  </div>
+</section>
+
+<section id="build" style="background:var(--ground-2)">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow" data-ka="გამოცდილებები">Experiences</p>
+      <h2 data-ka="მოირგე შენი კვირა">Tailor your week</h2>
+      <p class="lead" data-ka="აირჩიე პაკეტი, დაამატე ტურები, ვახშმები და სპა, და ნახე სავარაუდო ფასი.">Choose a camp, add tours, dinners and wellness, and see an estimate right away.</p>
+    </div>
+    <div class="builder">
+      <div class="addons" id="addons"></div>
+      <aside class="summary" aria-live="polite">
+        <label for="b-pkg"><span data-ka="პაკეტი">Camp</span>
+          <select id="b-pkg" class="field">
+            <option value="weekend">Five-Day Camp</option>
+            <option value="week" selected>Seven-Day Camp</option>
+            <option value="block">Ten-Day Performance Camp</option>
+          </select>
+        </label>
+        <label for="b-stay"><span data-ka="ნომერი">Stay</span>
+          <select id="b-stay" class="field">
+            <option value="own">Own accommodation</option>
+            <option value="std2" selected>Standard Twin</option>
+            <option value="std1">Standard King, solo</option>
+            <option value="dlx2">Deluxe King</option>
+            <option value="dlx1">Deluxe King, solo</option>
+            <option value="fam3">Family Room</option>
+          </select>
+        </label>
+        <label for="b-guests"><span data-ka="მოთამაშეები (მაქს. 10)">Players (max 10)</span>
+          <input id="b-guests" class="field" type="number" min="1" max="10" value="2">
+        </label>
+        <div class="row"><span data-ka="პროგრამა და ნომერი × მოთამაშე">Camp and stay × players</span><span id="s-base">€0</span></div>
+        <div class="row"><span data-ka="დამატებები">Experiences</span><span id="s-add">€0</span></div>
+        <div class="total"><span data-ka="სავარაუდო ჯამი">Estimate</span><b id="s-total">€0</b></div>
+        <p class="fine" data-ka="საბოლოო ფასს თარიღებისა და ხელმისაწვდომობის მიხედვით დაგიდასტურებთ.">Final price confirmed once dates and availability are set.</p>
+        <a class="btn solid" href="#book" id="b-send" data-ka="ამ არჩევანით მოთხოვნა">Request this itinerary</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow" data-ka="რატომ ჩვენ">Why Supra Padel</p>
+      <h2 data-ka="ხუთი მიზეზი, რომ საქართველოში ივარჯიშო">Five reasons to train in Georgia</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="reasons">
+      <div class="reason"><span class="n">I</span><h3 data-ka="ნამდვილი ქოუჩინგი">Real coaching</h3><p data-ka="სტრუქტურირებული პროგრამა და არა მხოლოდ კორტის ქირა.">A structured program, not just court hire.</p></div>
+      <div class="reason"><span class="n">II</span><h3 data-ka="სხეულიც ვარჯიშობს">Body and racket</h3><p data-ka="ფიზიკური მომზადება პადელის მოძრაობებზეა აგებული.">Conditioning designed around padel movement.</p></div>
+      <div class="reason"><span class="n">III</span><h3 data-ka="ქალაქის გულში">Heart of the city</h3><p data-ka="სასტუმრო ძველ თბილისშია, აბანოთუბანი და რესტორნები ფეხით.">Your hotel is in Old Tbilisi, with the sulfur baths and restaurants on foot.</p></div>
+      <div class="reason"><span class="n">IV</span><h3 data-ka="ქართული სტუმართმოყვარეობა">Georgian hospitality</h3><p data-ka="სუფრა, ღვინო და ადგილობრივი გიდები.">Supra, wine and local guides who know the country.</p></div>
+      <div class="reason"><span class="n">V</span><h3 data-ka="კერძო ჯგუფები">Private groups</h3><p data-ka="ინდივიდუალური თარიღები მეგობრებისთვის და კომპანიებისთვის.">Custom dates for friends and company teams.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--ground-2)">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow" data-ka="სტუმრები">Guests</p>
+      <h2 data-ka="რას ამბობენ მოთამაშეები">In their words</h2>
+    </div>
+    <div class="quotes">
+      <blockquote class="quote"><p>“My bandeja finally works, and walking into Old Tbilisi for dinner every evening was the best part.”</p><footer>Example guest · Munich</footer></blockquote>
+      <blockquote class="quote"><p>“Eight of us from the office. From the airport to the last toast, nothing was left to us.”</p><footer>Example guest · London</footer></blockquote>
+      <blockquote class="quote"><p>“The gym sessions were the surprise. My knees have never felt better on court.”</p><footer>Example guest · Amsterdam</footer></blockquote>
+    </div>
+    <p class="sample-note" data-ka="ნიმუში — ჩანაცვლდება რეალური შეფასებებით.">Sample reviews, to be replaced with real guest quotes.</p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap faq-grid">
+    <div class="sec-head" style="margin-bottom:0">
+      <p class="eyebrow">FAQ</p>
+      <h2 data-ka="სანამ დაჯავშნი">Before you reserve</h2>
+    </div>
+    <div class="faq">
+      <details><summary data-ka="საჭიროა პადელის გამოცდილება?">Do I need padel experience?</summary><p data-ka="არა. პირველ დღეს ჯგუფებს დონის მიხედვით ვყოფთ, დამწყებიდან ტურნირის მოთამაშემდე.">No. We group players by level on day one, from first-timers to tournament players.</p></details>
+      <details><summary data-ka="რამდენი ადამიანია ჯგუფში?">How big are the groups?</summary><p data-ka="თითო ჯგუფში მაქსიმუმ 10 მოთამაშეა. ასე ყველა იღებს ქოუჩის ყურადღებას, ხოლო ტურებზე და სუფრაზე ჯგუფი მყუდრო რჩება.">Each group is capped at 10 players. Everyone gets real attention from the coaches, and tours and dinners stay intimate.</p></details>
+      <details><summary data-ka="მარტო შემიძლია ჩამოსვლა?">Can I come on my own?</summary><p data-ka="დიახ. შეგიძლია აირჩიო ერთადგილიანი ნომერი ან გაგიზიაროთ ნომერი სხვა მოთამაშესთან.">Yes. Choose a single room, or we can pair you with another player.</p></details>
+      <details><summary data-ka="საჭიროა ვიზა?">Do I need a visa for Georgia?</summary><p data-ka="ევროკავშირის, დიდი ბრიტანეთის, აშშ-ის და სხვა მრავალი ქვეყნის მოქალაქეებს ვიზა არ სჭირდებათ. გადაამოწმე შენი პასპორტის მიხედვით.">Citizens of the EU, UK, US and many other countries can enter visa-free. Check the rules for your passport before booking.</p></details>
+      <details><summary data-ka="რა არ შედის ფასში?">What isn't included?</summary><p data-ka="ფრენები, სადილები, პაკეტის გარეთ ვახშმები და სამოგზაურო დაზღვევა.">Flights, lunches, dinners outside the listed supras, and travel insurance.</p></details>
+      <details><summary data-ka="როგორ ხდება დაჯავშნა?">How does reserving work?</summary><p data-ka="გამოგვიგზავნე მოთხოვნა, 24 საათში დაგიდასტურებთ თარიღებს და ფასს. ადგილი დეპოზიტით ფიქსირდება.">Send a request and we confirm dates and price within 24 hours. A deposit secures your place.</p></details>
+      <details><summary data-ka="კორპორატიული ჯგუფებისთვის?">Do you host company teams?</summary><p data-ka="დიახ. ვაწყობთ კერძო თარიღებს, შიდა ტურნირს და შეხვედრების სივრცეს.">Yes. Private dates, an internal tournament and meeting space can be arranged.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap book-grid">
+    <div>
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow" data-ka="დაჯავშნა">Reservations</p>
+        <h2 data-ka="დაგეგმე შენი ქემფი">Plan your camp</h2>
+        <p class="lead" data-ka="24 საათში გიპასუხებთ თარიღებით და ზუსტი ფასით.">We reply within 24 hours with dates and an exact quote.</p>
+      </div>
+      <div class="contact">
+        <div><b data-ka="ელ-ფოსტა">Email</b><span>hello@suprapadel.ge</span></div>
+        <div><b>WhatsApp</b><span>+995 5XX XXX XXX</span></div>
+        <div><b data-ka="სეზონი">Season</b><span data-ka="მარტი – ნოემბერი">March – November</span></div>
+      </div>
+    </div>
+    <div>
+      <form class="req" id="req" novalidate>
+        <label for="f-name"><span data-ka="სახელი, გვარი">Full name</span><input id="f-name" class="field" required placeholder="Anna Müller"></label>
+        <label for="f-email"><span data-ka="ელ-ფოსტა">Email</span><input id="f-email" class="field" type="email" required placeholder="anna@example.com"></label>
+        <label for="f-phone"><span data-ka="ტელეფონი">Phone</span><input id="f-phone" class="field" type="tel" placeholder="+49 …"></label>
+        <label for="f-dates"><span data-ka="თარიღები">Preferred dates</span><input id="f-dates" class="field" placeholder="12–19 April"></label>
+        <label for="f-pkg"><span data-ka="პაკეტი">Camp</span>
+          <select id="f-pkg" class="field"><option value="weekend">Five-Day Camp</option><option value="week" selected>Seven-Day Camp</option><option value="block">Ten-Day Performance Camp</option><option value="custom">Private / company group</option></select></label>
+        <label for="f-size"><span data-ka="ადამიანების რაოდენობა (მაქს. 10)">Players (max 10)</span><input id="f-size" class="field" type="number" min="1" max="10" value="2"></label>
+        <label for="f-msg" class="full"><span data-ka="შეტყობინება">Message</span><textarea id="f-msg" class="field" placeholder="Your level, wishes, dietary needs…"></textarea></label>
+        <div class="full"><button class="btn solid" type="submit" data-ka="მოთხოვნის გაგზავნა">Send request</button></div>
+      </form>
+      <div class="ok" id="ok" hidden></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span class="logo"><i></i>Supra Padel</span>
+    <span data-ka="პადელის ქემფები · თბილისი, საქართველო">Padel camps · Tbilisi, Georgia</span>
+    <span>Instagram · Facebook · WhatsApp</span>
+    <span style="flex-basis:100%;font-size:.75rem;opacity:.7">Photos: Padelbade · Oktopus Fitness Club · Ramada by Wyndham Tbilisi Old City</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* Real photos: set PHOTOS[key] = "url" to fill the matching data-photo slot. */
+  const PHOTOS={};
+  document.querySelectorAll("[data-photo]").forEach(el=>{const u=PHOTOS[el.dataset.photo];if(u){el.style.setProperty("--img",`url("${u}")`);el.classList.add("has-img")}});
+
+  const PKGS={weekend:{price:865,nights:4},week:{price:1510,nights:6},block:{price:2220,nights:9}};
+  /* Room cost per night (EUR, estimate), occupancy, hotel markup, breakfast per person */
+  const HOTEL={divisor:0.62,breakfast:17}; /* price = cost / (1 - 35% margin - 3% card fee) */
+  const ROOMS={own:{cost:0,occ:1},std2:{cost:85,occ:2},std1:{cost:85,occ:1},dlx2:{cost:105,occ:2},dlx1:{cost:105,occ:1},fam3:{cost:125,occ:3}};
+  const nightPP=k=>{const r=ROOMS[k];if(!r.cost)return 0;return Math.round((r.cost/r.occ+HOTEL.breakfast)/HOTEL.divisor)};
+  const STAYS=Object.fromEntries(Object.keys(ROOMS).map(k=>[k,nightPP(k)]));
+  const ADDONS=[
+    {id:"kakheti",en:["Kakheti wine day","Two family wineries, lunch, Sighnaghi"],ka:["კახეთის ღვინის დღე","ორი საოჯახო მარანი, სადილი, სიღნაღი"],p:116},
+    {id:"kazbegi",en:["Kazbegi mountain day","Gergeti Trinity and the Military Road"],ka:["ყაზბეგის დღე","გერგეტის სამება და სამხედრო გზა"],p:89},
+    {id:"mtskheta",en:["Mtskheta & Jvari","The ancient capital, half day"],ka:["მცხეთა და ჯვარი","ძველი დედაქალაქი, ნახევარი დღე"],p:27},
+    {id:"tbilisi",en:["Tbilisi by night","Private guide, Narikala, cable car"],ka:["ღამის თბილისი","კერძო გიდი, ნარიყალა, საბაგირო"],p:16},
+    {id:"supra",en:["Private supra","Chef's table with polyphonic singers"],ka:["კერძო სუფრა","შეფის მაგიდა და მრავალხმიანი სიმღერა"],p:97},
+    {id:"cooking",en:["Khinkali masterclass","Fold your own, then share them"],ka:["ხინკლის მასტერკლასი","გააკეთე და გაუზიარე"],p:43},
+    {id:"spa",en:["Private sulfur bath","Private room in Abanotubani, 1 h"],ka:["კერძო გოგირდის აბანო","კერძო ნომერი აბანოთუბანში, 1 სთ"],p:40},
+    {id:"massage",en:["Sports massage","60 min with a physiotherapist"],ka:["სპორტული მასაჟი","60 წთ ფიზიოთერაპევტთან"],p:65},
+    {id:"private",en:["Private lesson","1 h, one coach, just you"],ka:["ინდივიდუალური გაკვეთილი","1 სთ, მხოლოდ შენ და ქოუჩი"],p:81}
+  ];
+  let lang="en";
+  const fmt=n=>"€"+n.toLocaleString("en-US");
+  const box=document.getElementById("addons");
+  box.innerHTML=ADDONS.map(a=>`<label class="addon" for="a-${a.id}"><input type="checkbox" id="a-${a.id}" value="${a.id}"><div><b data-t="${a.id}-0">${a.en[0]}</b><span data-t="${a.id}-1">${a.en[1]}</span></div><span class="ap">${fmt(a.p)}${a.perNight?" / night":""}</span></label>`).join("");
+  const pkgSel=document.getElementById("b-pkg"),guests=document.getElementById("b-guests"),stSel=document.getElementById("b-stay");
+  document.querySelectorAll('input[name="stay"]').forEach(r=>r.addEventListener("change",()=>{stSel.value=r.value;calc()}));
+  stSel.addEventListener("change",calc);
+  function calc(){
+    const p=PKGS[pkgSel.value],g=Math.max(1,Math.min(10,parseInt(guests.value)||1));
+    let add=0;ADDONS.forEach(a=>{if(document.getElementById("a-"+a.id).checked)add+=a.p*(a.perNight?p.nights:1)});
+    const st=stSel.value, pp=p.price+STAYS[st]*p.nights;
+    document.getElementById("s-base").textContent=fmt(pp*g);
+    document.getElementById("s-add").textContent=fmt(add*g);
+    document.getElementById("s-total").textContent=fmt((pp+add)*g);
+    const order=["weekend","week","block"];document.querySelectorAll("[data-from]").forEach((el,ix)=>{const q=PKGS[order[ix]];el.textContent=fmt(q.price+STAYS.std2*q.nights)});
+    document.querySelectorAll("[data-stay-price]").forEach(el=>{el.textContent=fmt(p.price+STAYS[el.dataset.stayPrice]*p.nights)});
+    const days={weekend:5,week:7,block:10}[pkgSel.value];
+    const r=document.getElementById("st-"+st); if(r&&!r.checked)r.checked=true;
+  }
+  box.addEventListener("change",calc);pkgSel.addEventListener("change",calc);guests.addEventListener("input",calc);calc();
+  document.querySelectorAll("[data-pkg]").forEach(b=>b.addEventListener("click",()=>{document.getElementById("f-pkg").value=b.dataset.pkg;pkgSel.value=b.dataset.pkg;if(b.dataset.date)document.getElementById("f-dates").value=b.dataset.date;calc()}));
+  document.getElementById("b-send").addEventListener("click",()=>{
+    document.getElementById("f-pkg").value=pkgSel.value;
+    document.getElementById("f-size").value=guests.value;
+    const chosen=ADDONS.filter(a=>document.getElementById("a-"+a.id).checked).map(a=>a.en[0]);
+    const stay=stSel.options[stSel.selectedIndex].text;
+    document.getElementById("f-msg").value="Stay: "+stay+".\n"+(chosen.length?"Experiences: "+chosen.join(", ")+".\n":"");
+  });
+  const form=document.getElementById("req"),ok=document.getElementById("ok");
+  form.addEventListener("submit",e=>{
+    e.preventDefault();
+    const name=document.getElementById("f-name"),email=document.getElementById("f-email");
+    ok.hidden=false;
+    if(!name.value.trim()||!email.value||!email.checkValidity()){ok.textContent=lang==="ka"?"შეავსე სახელი და სწორი ელ-ფოსტა.":"Add your name and a valid email so we can reply.";return}
+    const first=name.value.trim().split(" ")[0];
+    ok.textContent=lang==="ka"?`მადლობა, ${first}. მოთხოვნა მზადაა (პრევიუ: გაგზავნა ჯერ არ არის მიერთებული).`:`Thank you, ${first}. Your request is ready (preview: sending isn't connected yet).`;
+  });
+  const nodes=[...document.querySelectorAll("[data-ka],[data-ka-html]")];
+  nodes.forEach(n=>{n.dataset.en=n.innerHTML});
+  function setLang(l){
+    lang=l;document.documentElement.lang=l;
+    nodes.forEach(n=>{if(l==="ka"){if(n.dataset.kaHtml!==undefined)n.innerHTML=n.dataset.kaHtml;else n.textContent=n.dataset.ka}else n.innerHTML=n.dataset.en});
+    ADDONS.forEach(a=>[0,1].forEach(i=>{const el=document.querySelector(`[data-t="${a.id}-${i}"]`);if(el)el.textContent=a[l][i]}));
+    document.getElementById("lang-en").setAttribute("aria-pressed",l==="en");
+    document.getElementById("lang-ka").setAttribute("aria-pressed",l==="ka");
+    calc();
+    try{localStorage.setItem("sp-lang",l)}catch(e){}
+  }
+  document.getElementById("lang-en").addEventListener("click",()=>setLang("en"));
+  document.getElementById("lang-ka").addEventListener("click",()=>setLang("ka"));
+  try{if(localStorage.getItem("sp-lang")==="ka")setLang("ka")}catch(e){}
+})();
+</script>
+</body></html>
