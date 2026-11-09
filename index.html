@@ -357,7 +357,7 @@ footer.foot .logo{font-size:1rem}
         <p class="dur" data-ka="5 დღე · 4 ღამე · 4 სავარჯიშო დღე">5 days · 4 nights · 4 training days</p>
         <h3 data-ka="5-დღიანი ქემფი">The Five-Day Camp</h3>
         <div class="price"><small data-ka="დან">from</small><b data-from>€1,690</b></div>
-        <p class="alt-price" data-ka="მხოლოდ პროგრამა, სასტუმროს გარეშე: €865-დან">Program only, no hotel: from €865</p>
+        <p class="alt-price" data-ka="მხოლოდ პროგრამა, სასტუმროს გარეშე: €940-დან">Program only, no hotel: from €940</p>
         <p class="seats" data-ka="მაქს. 10 მოთამაშე ჯგუფში">Max 10 players per group</p>
         <ul>
           <li data-ka="12 სთ ჯგუფური ქოუჩინგი">12 h group coaching</li>
@@ -372,7 +372,7 @@ footer.foot .logo{font-size:1rem}
         <p class="dur" data-ka="7 დღე · 6 ღამე · 5 სავარჯიშო დღე">7 days · 6 nights · 5 training days</p>
         <h3 data-ka="7-დღიანი ქემფი">The Seven-Day Camp</h3>
         <div class="price"><small data-ka="დან">from</small><b data-from>€2,490</b></div>
-        <p class="alt-price" data-ka="მხოლოდ პროგრამა, სასტუმროს გარეშე: €1,510-დან">Program only, no hotel: from €1,510</p>
+        <p class="alt-price" data-ka="მხოლოდ პროგრამა, სასტუმროს გარეშე: €1,640-დან">Program only, no hotel: from €1,640</p>
         <p class="seats" data-ka="მაქს. 10 მოთამაშე ჯგუფში">Max 10 players per group</p>
         <ul>
           <li data-ka="18 სთ ქოუჩინგი">18 h coaching</li>
@@ -387,7 +387,7 @@ footer.foot .logo{font-size:1rem}
         <p class="dur" data-ka="10 დღე · 9 ღამე · 8 სავარჯიშო დღე">10 days · 9 nights · 8 training days</p>
         <h3 data-ka="10-დღიანი პერფორმანს ქემფი">The Ten-Day Performance Camp</h3>
         <div class="price"><small data-ka="დან">from</small><b data-from>€3,590</b></div>
-        <p class="alt-price" data-ka="მხოლოდ პროგრამა, სასტუმროს გარეშე: €2,220-დან">Program only, no hotel: from €2,220</p>
+        <p class="alt-price" data-ka="მხოლოდ პროგრამა, სასტუმროს გარეშე: €2,410-დან">Program only, no hotel: from €2,410</p>
         <p class="seats" data-ka="მაქს. 10 მოთამაშე ჯგუფში">Max 10 players per group</p>
         <ul>
           <li data-ka="24 სთ ქოუჩინგი, 2 ინდივიდუალური გაკვეთილი">24 h coaching incl. 2 private lessons</li>
@@ -594,9 +594,9 @@ footer.foot .logo{font-size:1rem}
   const PHOTOS={};
   document.querySelectorAll("[data-photo]").forEach(el=>{const u=PHOTOS[el.dataset.photo];if(u){el.style.setProperty("--img",`url("${u}")`);el.classList.add("has-img")}});
 
-  const PKGS={weekend:{price:865,nights:4},week:{price:1510,nights:6},block:{price:2220,nights:9}};
+  const PKGS={weekend:{price:940,nights:4},week:{price:1640,nights:6},block:{price:2410,nights:9}};
   /* Room cost per night (EUR, estimate), occupancy, hotel markup, breakfast per person */
-  const HOTEL={divisor:0.62,breakfast:17}; /* price = cost / (1 - 35% margin - 3% card fee) */
+  const HOTEL={divisor:0.57,breakfast:17}; /* price = cost / (1 - 40% margin - 3% card fee) */
   const ROOMS={own:{cost:0,occ:1},std2:{cost:85,occ:2},std1:{cost:85,occ:1},dlx2:{cost:105,occ:2},dlx1:{cost:105,occ:1},fam3:{cost:125,occ:3}};
   const nightPP=k=>{const r=ROOMS[k];if(!r.cost)return 0;return Math.round((r.cost/r.occ+HOTEL.breakfast)/HOTEL.divisor)};
   const STAYS=Object.fromEntries(Object.keys(ROOMS).map(k=>[k,nightPP(k)]));
