@@ -60,11 +60,16 @@ nav.links a:hover{color:var(--gold)}
 
 /* hero */
 .hero{padding-block:0;position:relative}
-.hero .ph{min-height:clamp(520px,78vh,760px);display:flex;align-items:flex-end}
-.hero .ph::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,22,19,.15) 0%,rgba(14,22,19,.35) 45%,rgba(14,22,19,.96) 100%)}
-.hero .ph::after{top:20px;bottom:auto;right:16px;left:auto}
-.hero-in{position:relative;z-index:1;padding-block:72px 64px;width:100%}
-.hero h1{font-size:clamp(2.6rem,6.6vw,5.4rem);max-width:15ch;margin-top:22px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding-block:72px 56px}
+.hero-in{min-width:0}
+.hero h1{font-size:clamp(2.4rem,4.8vw,4.4rem);max-width:15ch;margin-top:22px}
+.hero-collage{position:relative;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:280px 210px;gap:12px}
+.hero-collage .ph{min-width:0;border:1px solid var(--rule)}
+.hero-collage .ph.c1{grid-column:1/-1}
+.hero-collage .ph.c2{background-position:0% 50%}
+.hero-collage .cap{position:absolute;font:400 .64rem var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#e9e4d8;background:rgba(14,22,19,.72);padding:4px 8px}
+.hero-collage .cap.c1{left:10px;top:244px}.hero-collage .cap.c2{left:10px;bottom:10px}.hero-collage .cap.c3{left:calc(50% + 16px);bottom:10px}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr;gap:32px;padding-block:24px 40px}.hero-collage{order:-1;grid-template-rows:200px 140px}.hero-collage .cap.c1{top:164px}}
 .hero h1 em{font-style:normal;color:var(--gold)}
 .hero .lead{margin-top:22px;color:#cfd3cc}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
@@ -279,8 +284,8 @@ footer.foot .logo{font-size:1rem}
 
 <main id="top">
 <section class="hero">
-  <div class="ph" data-label="Ramada Tbilisi Old City" data-photo="court-hero" style="--img:url('https://images.trvl-media.com/lodging/71000000/70080000/70077100/70077024/75267061.jpg?impolicy=fcrop&w=1920&h=1080')">
-    <div class="wrap hero-in">
+  <div class="wrap hero-grid">
+    <div class="hero-in">
       <p class="eyebrow" data-ka="პადელი · ფიზიკური მომზადება · თბილისი · 10 ადგილი ჯგუფში">Padel · Performance · Tbilisi · 10 places per group</p>
       <h1 data-ka-html="პადელის ქემფი, <em>სადაც ყველა დეტალი</em> გათვალისწინებულია">The padel retreat <em>where every detail</em> is taken care of</h1>
       <p class="lead" data-ka="ელიტური ქოუჩინგი Padelbade Krtsanisi-ზე, ფიზიკური მომზადება Oktopus Mziuri-ში და ცხოვრება Ramada by Wyndham Tbilisi Old City-ში, ძველ თბილისში. ტურები, ქართული სუფრა და ტრანსფერები — ერთ პაკეტში.">Elite coaching at Padelbade Krtsanisi, conditioning at Oktopus Mziuri and your stay at Ramada by Wyndham Tbilisi Old City. Tours, Georgian supra dinners and private transfers, arranged as one.</p>
@@ -289,6 +294,7 @@ footer.foot .logo{font-size:1rem}
         <a class="btn" href="#camps" data-ka="დაჯავშნა">Book now</a>
       </div>
     </div>
+    <div class="hero-collage" aria-hidden="true"><div class="ph c1" style="--img:url('https://images.trvl-media.com/lodging/71000000/70080000/70077100/70077024/75267061.jpg?impolicy=fcrop&w=1400&h=933')"></div><div class="ph c2" style="--img:url('https://pado.app/api/media/file/Padelbade%20Krtsanisi.webp')"></div><div class="ph c3" style="--img:url('https://oktopus.ge/wp-content/uploads/2025/08/main-1536x1024.jpg')"></div><span class="cap c1">Ramada Tbilisi Old City</span><span class="cap c2">Padelbade Krtsanisi</span><span class="cap c3">Oktopus Mziuri</span></div>
   </div>
   <div class="wrap">
     <div class="trio">
