@@ -266,7 +266,6 @@ footer.foot .logo{font-size:1rem}
       <a href="#dates" data-ka="თარიღები">Dates</a>
       <a href="#camps" data-ka="პაკეტები">Camps</a>
       <a href="#stay" data-ka="ნომრები">Stay</a>
-            <a href="#build" data-ka="დამატებები">Experiences</a>
       <a href="#faq" data-ka="კითხვები">FAQ</a>
       <a href="#book" data-ka="დაჯავშნა">Reserve</a>
     </nav>
@@ -471,47 +470,7 @@ footer.foot .logo{font-size:1rem}
         <div class="body"><p class="occ" data-ka="Family ნომერი · 3 ადამიანი">Family room · 3 guests</p><h3 data-ka="Family ნომერი">Family Room</h3><p data-ka="დიდი და ერთადგილიანი საწოლი. საუკეთესო ფასი სამი მეგობრისთვის.">A king and a single bed. Best value for three friends.</p>
         <div class="opts"><label class="opt" for="st-fam3"><input type="radio" name="stay" id="st-fam3" value="fam3"><span><span data-ka="სამზე">Shared by three</span><small data-ka="ერთ ადამიანზე">per person</small></span><b data-stay-price="fam3">€0</b></label></div></div></div>
     </div>
-    <p class="stay-note" data-ka="ფასი ერთ ადამიანზეა მთელ ქემფზე და იცვლება, როცა ქვემოთ პაკეტს ირჩევ.">Prices are per person for the whole camp. They update when you change the camp length in the planner below.</p>
-  </div>
-</section>
-
-<section id="build" style="background:var(--ground-2)">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow" data-ka="გამოცდილებები">Experiences</p>
-      <h2 data-ka="მოირგე შენი კვირა">Tailor your week</h2>
-      <p class="lead" data-ka="აირჩიე პაკეტი, დაამატე ტურები, ვახშმები და სპა, და ნახე სავარაუდო ფასი.">Choose a camp, add tours, dinners and wellness, and see an estimate right away.</p>
-    </div>
-    <div class="builder">
-      <div class="addons" id="addons"></div>
-      <aside class="summary" aria-live="polite">
-        <label for="b-pkg"><span data-ka="პაკეტი">Camp</span>
-          <select id="b-pkg" class="field">
-            <option value="weekend">Five-Day Camp</option>
-            <option value="week" selected>Seven-Day Camp</option>
-            <option value="block">Ten-Day Performance Camp</option>
-          </select>
-        </label>
-        <label for="b-stay"><span data-ka="ნომერი">Stay</span>
-          <select id="b-stay" class="field">
-            <option value="own">Own accommodation</option>
-            <option value="std2" selected>Standard Twin</option>
-            <option value="std1">Standard King, solo</option>
-            <option value="dlx2">Deluxe King</option>
-            <option value="dlx1">Deluxe King, solo</option>
-            <option value="fam3">Family Room</option>
-          </select>
-        </label>
-        <label for="b-guests"><span data-ka="მოთამაშეები (მაქს. 10)">Players (max 10)</span>
-          <input id="b-guests" class="field" type="number" min="1" max="10" value="2">
-        </label>
-        <div class="row"><span data-ka="პროგრამა და ნომერი × მოთამაშე">Camp and stay × players</span><span id="s-base">€0</span></div>
-        <div class="row"><span data-ka="დამატებები">Experiences</span><span id="s-add">€0</span></div>
-        <div class="total"><span data-ka="სავარაუდო ჯამი">Estimate</span><b id="s-total">€0</b></div>
-        <p class="fine" data-ka="საბოლოო ფასს თარიღებისა და ხელმისაწვდომობის მიხედვით დაგიდასტურებთ.">Final price confirmed once dates and availability are set.</p>
-        <a class="btn solid" href="#book" id="b-send" data-ka="ამ არჩევანით მოთხოვნა">Request this itinerary</a>
-      </aside>
-    </div>
+    <div class="stay-note" style="display:flex;flex-wrap:wrap;gap:.75rem 1rem;align-items:center"><label for="b-pkg" style="display:flex;gap:.6rem;align-items:center"><span data-ka="ფასები პაკეტისთვის:">Prices for:</span><select id="b-pkg" class="field" style="width:auto"><option value="weekend">Five-Day Camp</option><option value="week" selected>Seven-Day Camp</option><option value="block">Ten-Day Performance Camp</option></select></label><span data-ka="ფასი ერთ ადამიანზეა მთელ ქემფზე.">Per person for the whole camp.</span></div>
   </div>
 </section>
 
@@ -618,45 +577,19 @@ footer.foot .logo{font-size:1rem}
   const ROOMS={own:{cost:0,occ:1},std2:{cost:85,occ:2},std1:{cost:85,occ:1},dlx2:{cost:105,occ:2},dlx1:{cost:105,occ:1},fam3:{cost:125,occ:3}};
   const nightPP=k=>{const r=ROOMS[k];if(!r.cost)return 0;return Math.round((r.cost/r.occ+HOTEL.breakfast)/HOTEL.divisor)};
   const STAYS=Object.fromEntries(Object.keys(ROOMS).map(k=>[k,nightPP(k)]));
-  const ADDONS=[
-    {id:"kakheti",en:["Kakheti wine day","Two family wineries, lunch, Sighnaghi"],ka:["კახეთის ღვინის დღე","ორი საოჯახო მარანი, სადილი, სიღნაღი"],p:116},
-    {id:"kazbegi",en:["Kazbegi mountain day","Gergeti Trinity and the Military Road"],ka:["ყაზბეგის დღე","გერგეტის სამება და სამხედრო გზა"],p:89},
-    {id:"mtskheta",en:["Mtskheta & Jvari","The ancient capital, half day"],ka:["მცხეთა და ჯვარი","ძველი დედაქალაქი, ნახევარი დღე"],p:27},
-    {id:"tbilisi",en:["Tbilisi by night","Private guide, Narikala, cable car"],ka:["ღამის თბილისი","კერძო გიდი, ნარიყალა, საბაგირო"],p:16},
-    {id:"supra",en:["Private supra","Chef's table with polyphonic singers"],ka:["კერძო სუფრა","შეფის მაგიდა და მრავალხმიანი სიმღერა"],p:97},
-    {id:"cooking",en:["Khinkali masterclass","Fold your own, then share them"],ka:["ხინკლის მასტერკლასი","გააკეთე და გაუზიარე"],p:43},
-    {id:"spa",en:["Private sulfur bath","Private room in Abanotubani, 1 h"],ka:["კერძო გოგირდის აბანო","კერძო ნომერი აბანოთუბანში, 1 სთ"],p:40},
-    {id:"massage",en:["Sports massage","60 min with a physiotherapist"],ka:["სპორტული მასაჟი","60 წთ ფიზიოთერაპევტთან"],p:65},
-    {id:"private",en:["Private lesson","1 h, one coach, just you"],ka:["ინდივიდუალური გაკვეთილი","1 სთ, მხოლოდ შენ და ქოუჩი"],p:81}
-  ];
   let lang="en";
   const fmt=n=>"€"+n.toLocaleString("en-US");
-  const box=document.getElementById("addons");
-  box.innerHTML=ADDONS.map(a=>`<label class="addon" for="a-${a.id}"><input type="checkbox" id="a-${a.id}" value="${a.id}"><div><b data-t="${a.id}-0">${a.en[0]}</b><span data-t="${a.id}-1">${a.en[1]}</span></div><span class="ap">${fmt(a.p)}${a.perNight?" / night":""}</span></label>`).join("");
-  const pkgSel=document.getElementById("b-pkg"),guests=document.getElementById("b-guests"),stSel=document.getElementById("b-stay");
-  document.querySelectorAll('input[name="stay"]').forEach(r=>r.addEventListener("change",()=>{stSel.value=r.value;calc()}));
-  stSel.addEventListener("change",calc);
+  const pkgSel=document.getElementById("b-pkg");
+  let st="std2";
+  document.querySelectorAll('input[name="stay"]').forEach(r=>r.addEventListener("change",()=>{st=r.value;calc()}));
   function calc(){
-    const p=PKGS[pkgSel.value],g=Math.max(1,Math.min(10,parseInt(guests.value)||1));
-    let add=0;ADDONS.forEach(a=>{if(document.getElementById("a-"+a.id).checked)add+=a.p*(a.perNight?p.nights:1)});
-    const st=stSel.value, pp=p.price+STAYS[st]*p.nights;
-    document.getElementById("s-base").textContent=fmt(pp*g);
-    document.getElementById("s-add").textContent=fmt(add*g);
-    document.getElementById("s-total").textContent=fmt((pp+add)*g);
+    const p=PKGS[pkgSel.value];
     const order=["weekend","week","block"];document.querySelectorAll("[data-from]").forEach((el,ix)=>{const q=PKGS[order[ix]];el.textContent=fmt(q.price+STAYS.std2*q.nights)});
     document.querySelectorAll("[data-stay-price]").forEach(el=>{el.textContent=fmt(p.price+STAYS[el.dataset.stayPrice]*p.nights)});
-    const days={weekend:5,week:7,block:10}[pkgSel.value];
     const r=document.getElementById("st-"+st); if(r&&!r.checked)r.checked=true;
   }
-  box.addEventListener("change",calc);pkgSel.addEventListener("change",calc);guests.addEventListener("input",calc);calc();
+  pkgSel.addEventListener("change",calc);calc();
   document.querySelectorAll("[data-pkg]").forEach(b=>b.addEventListener("click",()=>{document.getElementById("f-pkg").value=b.dataset.pkg;pkgSel.value=b.dataset.pkg;if(b.dataset.date)document.getElementById("f-dates").value=b.dataset.date;calc()}));
-  document.getElementById("b-send").addEventListener("click",()=>{
-    document.getElementById("f-pkg").value=pkgSel.value;
-    document.getElementById("f-size").value=guests.value;
-    const chosen=ADDONS.filter(a=>document.getElementById("a-"+a.id).checked).map(a=>a.en[0]);
-    const stay=stSel.options[stSel.selectedIndex].text;
-    document.getElementById("f-msg").value="Stay: "+stay+".\n"+(chosen.length?"Experiences: "+chosen.join(", ")+".\n":"");
-  });
   const form=document.getElementById("req"),ok=document.getElementById("ok");
   form.addEventListener("submit",e=>{
     e.preventDefault();
@@ -671,7 +604,6 @@ footer.foot .logo{font-size:1rem}
   function setLang(l){
     lang=l;document.documentElement.lang=l;
     nodes.forEach(n=>{if(l==="ka"){if(n.dataset.kaHtml!==undefined)n.innerHTML=n.dataset.kaHtml;else n.textContent=n.dataset.ka}else n.innerHTML=n.dataset.en});
-    ADDONS.forEach(a=>[0,1].forEach(i=>{const el=document.querySelector(`[data-t="${a.id}-${i}"]`);if(el)el.textContent=a[l][i]}));
     document.getElementById("lang-en").setAttribute("aria-pressed",l==="en");
     document.getElementById("lang-ka").setAttribute("aria-pressed",l==="ka");
     calc();
