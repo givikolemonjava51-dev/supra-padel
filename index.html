@@ -290,6 +290,7 @@ dialog.pm::backdrop{background:rgba(5,9,8,.78);backdrop-filter:blur(3px)}
 .pm .week .day{grid-template-columns:110px 1fr 1fr 1fr;gap:20px;padding-block:16px}
 .pkg{cursor:pointer}.pkg .more{font:400 .72rem var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--gold);background:none;border:0;padding:0;text-align:left;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
 @media (max-width:780px){.pm-cols{grid-template-columns:1fr;gap:28px}.pm-head,.pm-body,.pm-foot{padding-inline:18px}.pm .week .day{grid-template-columns:1fr;gap:8px}.pm-foot{flex-wrap:wrap}.pm-foot .note{flex-basis:100%}#pm-close{display:none}.pm-foot .btn{flex:1 1 100%;padding-inline:16px}}
+.stay-pick{display:flex;flex-wrap:wrap;gap:.75rem 1.25rem;align-items:center;margin:0 0 28px;padding:18px 22px;border:1px solid var(--gold-soft);background:var(--ground-2)}.stay-pick label{display:flex;gap:.75rem;align-items:center;font-size:1rem}.stay-pick label>span{color:var(--gold);font:400 .74rem var(--mono);letter-spacing:.18em;text-transform:uppercase}.stay-pick select{width:auto;font-size:1.05rem}.stay-pick>span{color:var(--mist);font-size:.9rem}.stay-next{display:flex;justify-content:flex-end;margin-top:28px}@media (max-width:620px){.stay-next .btn{width:100%}}
 </style>
 
 <header class="top">
@@ -489,6 +490,7 @@ dialog.pm::backdrop{background:rgba(5,9,8,.78);backdrop-filter:blur(3px)}
       <h2 data-ka="სად დარჩები">Where you'll sleep</h2>
       <p class="lead" data-ka="ჯგუფი ცხოვრობს Ramada by Wyndham Tbilisi Old City-ში, ავლაბარში. ფასი ერთ ადამიანზეა და მოიცავს მთელ პროგრამას და საუზმეს.">The group stays at Ramada by Wyndham Tbilisi Old City in Avlabari. Prices are per person and include the full camp program and breakfast.</p>
     </div>
+    <div class="stay-pick"><label for="b-pkg" style="display:flex;gap:.6rem;align-items:center"><span data-ka="ფასები პაკეტისთვის:">Prices for:</span><select id="b-pkg" class="field" style="width:auto"><option value="weekend">Five-Day Camp</option><option value="week" selected>Seven-Day Camp</option><option value="block">Ten-Day Performance Camp</option></select></label><span data-ka="ფასი ერთ ადამიანზეა მთელ ქემფზე.">Per person for the whole camp.</span></div>
     <div class="stays" role="radiogroup" aria-label="Room type">
       <div class="stay">
         <div class="ph" style="--img:url('https://pado.app/api/media/file/Padelbade%20Krtsanisi.webp');background-position:0% 50%" data-cap="Padelbade Krtsanisi"></div>
@@ -507,7 +509,7 @@ dialog.pm::backdrop{background:rgba(5,9,8,.78);backdrop-filter:blur(3px)}
         <div class="body"><p class="occ" data-ka="Family ნომერი · 3 ადამიანი">Family room · 3 guests</p><h3 data-ka="Family ნომერი">Family Room</h3><p data-ka="დიდი და ერთადგილიანი საწოლი. საუკეთესო ფასი სამი მეგობრისთვის.">A king and a single bed. Best value for three friends.</p>
         <div class="opts"><label class="opt" for="st-fam3"><input type="radio" name="stay" id="st-fam3" value="fam3"><span><span data-ka="სამზე">Shared by three</span><small data-ka="ერთ ადამიანზე">per person</small></span><b data-stay-price="fam3">€0</b></label></div></div></div>
     </div>
-    <div class="stay-note" style="display:flex;flex-wrap:wrap;gap:.75rem 1rem;align-items:center"><label for="b-pkg" style="display:flex;gap:.6rem;align-items:center"><span data-ka="ფასები პაკეტისთვის:">Prices for:</span><select id="b-pkg" class="field" style="width:auto"><option value="weekend">Five-Day Camp</option><option value="week" selected>Seven-Day Camp</option><option value="block">Ten-Day Performance Camp</option></select></label><span data-ka="ფასი ერთ ადამიანზეა მთელ ქემფზე.">Per person for the whole camp.</span><a class="btn solid" href="#dates" id="to-book" style="margin-left:auto" data-ka="გაგრძელება: თარიღის არჩევა">Continue: choose dates</a></div>
+    <div class="stay-next"><a class="btn solid" href="#dates" id="to-book" data-ka="გაგრძელება: თარიღის არჩევა">Continue: choose dates</a></div>
   </div>
 </section>
 
